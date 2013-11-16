@@ -77,7 +77,22 @@ h1 {
     padding:0px;
     text-align:center;
 }
-
+#appfooter
+{
+	position:fixed;
+    width: 100%;
+    bottom: -350px;
+    height: 400px;
+    clear:both;
+    font-size: 11px;
+ 	background: #000;
+ 	border-top: 1px dotted #d83800;    
+ 	z-index: 1000;
+ 	transition: bottom 2s;
+ 	-moz-transition: bottom 2s;
+ 	-webkit-transition: bottom 2s;
+	 -o-transition: bottom 2s;
+}
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;

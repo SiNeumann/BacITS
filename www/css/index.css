@@ -79,6 +79,10 @@ h1 {
 }
 h4
 {
+	
+	/*
+	 * deprecated ersetzt von "appfooter"
+	 */
 	position:fixed;
     width: 100%;
     bottom: -350px;
@@ -93,6 +97,10 @@ h4
  	-webkit-transition: bottom 2s;
 	 -o-transition: bottom 2s;
 }
+
+/*
+ * infoUnit Container in dem Bild und Überschrift in Subpages wie news oder Projekte abgelegt werden
+ */
 
 .infoUnit
 {
@@ -121,6 +129,9 @@ h4
 
 #appheader
 {
+	/*
+	 * MainHeader der App
+	 */
 	position:fixed;
 	width:100%;
 	bottom:90%;
@@ -130,6 +141,9 @@ h4
 }
 .appfooter
 {
+	/*
+	 * Footer Element in Subpages
+	 */
 		position:fixed;
     	width: 100%;
     	bottom: 0%;
@@ -147,6 +161,9 @@ h4
 
 .header
 {
+	/*
+	 * header in Subpages
+	 */
 	position:fixed;
 	width:100%;
 	background:#00415E;
@@ -157,6 +174,9 @@ h4
 
 .endnode
 {
+	/*
+	 * Abschluß Elemente damit der Footer die Nachricht nicht verdeckt, kann man besser machen
+	 */
 	position:relative;
 	width:100%
 	bottom:0%;

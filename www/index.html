@@ -34,21 +34,33 @@
         $( "[data-role='header'], [data-role='footer']" ).toolbar();
         });
       </script>
+      <script>
+      	function ddd () {
+      		alert("My First JavaScript");
+			
+		  }
+      </script>
+      <script type="text/javascript" src="js/navFun.js" > </script>
     </head>
     <body>
 
 
       <div data-role="page" id="p1">
-        <div data-role="header">
-          <h1>Seitentitel</h1>
+        <div id=appheader data-role="header">
+          <h1>ITS APP</h1>
         </div>
-        <div data-role="content">
-          <ul data-role="listview">
-            <li>
-              <a href="#p2">NEWS</a>
+        <div id="main" data-role="page" >
+        	<ul datarole="" ></ul>
+        	
+        </div>
+        <div  id="ListElement" data-role="content">
+        
+          <ul  data-role="listview">
+            <li onclick="AddContent('newssite')" >
+              <a  href="#p2">NEWS</a>
             </li>
             <li>
-              <a href="#p3">TERMINE</a>
+              <a onclick="displayMenu()" href="#p3">TERMINE</a>
             </li>
             <li>
               <a href="#p4">JOBBÖRSE</a>
@@ -58,6 +70,7 @@
             </li>
             <li>
               <a href="#p6">SUDOKU</a>
+              
             </li>
           </ul>
 
@@ -71,16 +84,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a href="a.html">Info</a>
+                <a onclick="displayMenu("News")" href="#p2">News</a>
               </li>
               <li>
-                <a href="b.html">Friends</a>
+                <a href="#p3">Termine</a>
               </li>
               <li>
-                <a href="c.html">Albums</a>
+                <a href="#p4">Jobs</a>
               </li>
               <li>
-                <a href="d.html">Emails</a>
+                <a href="#p5">Projekte</a>
+                
+              </li>
+              <li>
+                <a href="#p5">Sudoku</a>
               </li>
             </ul>
           </div>
@@ -89,23 +106,21 @@
         <!-- /footer -->
       </div>
 
-      <div data-role="page" id="p2">
+      <div onactivate="displayMenu" data-role="page" id="p2">
         <div data-role="header">
-          <h1>Seite zwei</h1>
+          <h1>News</h1>
         </div>
         <div data-role="content">
-          <p>Hier kommen die Inhalte hin</p>
-          <p>
-            Zurück zu <a href="#p1">Home</a>
-          </p>
+          <p id="newssite" ></p>
+         
         </div>
         <div data-role="footer">
-          <h4>Seitenfuß</h4>
+          <a id=appfooter href="#p1">Seitenfuss</a>
         </div>
       </div>
       <div data-role="page" id="p3">
         <div data-role="header">
-          <h1>Seitentitel</h1>
+          <h1>News</h1>
         </div>
         <div data-role="content">
           <p>Hier kommen die Inhalte hin</p>
@@ -114,7 +129,7 @@
           </p>
         </div>
         <div id="appfooter" data-role="footer">
-          <h4>Seitenfuß</h4>
+          <a id=appfooter href="#p1">Seitenfuss</a>
         </div>
       </div>
 
@@ -129,7 +144,7 @@
           </p>
         </div>
         <div data-role="footer">
-          <h4>Seitenfuß</h4>
+          <a id=appfooter href="#p1">Seitenfuss</a>
         </div>
       </div>
       <div data-role="page" id="p5">
@@ -143,7 +158,7 @@
           </p>
         </div>
         <div data-role="footer">
-          <h4>Seitenfuß</h4>
+          <a id=appfooter href="#p1">Seitenfuss</a>
         </div>
       </div>
 
@@ -158,7 +173,7 @@
           </p>
         </div>
         <div data-role="footer">
-          <h4>Seitenfuß</h4>
+          <a id=appfooter href="#p1">Seitenfuss</a>
         </div>
       </div>
     </body>

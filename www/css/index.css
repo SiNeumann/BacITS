@@ -97,12 +97,14 @@ h4
 .infoUnit
 {
 	border-style:solid;
-	background-color: #009933;
+	background-color: #F9F9F9
 	width: 100%;
 	border-bottom-color: #000000;
-	border-bottom-width: 5px;
-	border-width: 5px;
+	border-bottom-width: 1px;
+	border-width: 1px;
 	border-color:#000000;
+	font-size:medium;
+	font-align:center;
 }
 
 

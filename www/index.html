@@ -56,20 +56,20 @@
         <div  id="ListElement" data-role="content">
         
           <ul  data-role="listview">
-            <li onclick="AddContent('newssite')" >
+            <li onclick="AddContent('news')" >
               <a  href="#p2">NEWS</a>
             </li>
             <li>
-              <a onclick="displayMenu()" href="#p3">TERMINE</a>
+              <a onclick="AddContent('termine')" href="#p3">TERMINE</a>
             </li>
             <li>
-              <a href="#p4">JOBBÖRSE</a>
+              <a onclick="AddContent('jobs')" href="#p4">JOBBÖRSE</a>
             </li>
             <li>
-              <a href="#p5">PROJEKTE</a>
+              <a onclick="AddContent('Projekte')" href="#p5">PROJEKTE</a>
             </li>
             <li>
-              <a href="#p6">SUDOKU</a>
+              <a onclick="AddContent('sudoku')" href="#p6">SUDOKU</a>
               
             </li>
           </ul>
@@ -84,20 +84,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="displayMenu("News")" href="#p2">News</a>
+                <a onclick="AddContent('news')" href="#p2">News</a>
               </li>
               <li>
-                <a href="#p3">Termine</a>
+                <a onclick="AddContent('termine')" href="#p3">Termine</a>
               </li>
               <li>
-                <a href="#p4">Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4">Jobs</a>
               </li>
               <li>
-                <a href="#p5">Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5">Projekte</a>
                 
               </li>
               <li>
-                <a href="#p5">Sudoku</a>
+                <a onclick="AddContent('sudoko')" href="#p5">Sudoku</a>
               </li>
             </ul>
           </div>
@@ -106,12 +106,12 @@
         <!-- /footer -->
       </div>
 
-      <div onactivate="displayMenu" data-role="page" id="p2">
-        <div data-role="header">
+       <div onactivate="displayMenu" data-role="page" id="p2">
+        <div class="header">
           <h1>News</h1>
         </div>
         <div data-role="content">
-          <p id="newssite" ></p>
+          <p id="news" ></p>
          
         </div>
         <div data-role="footer">
@@ -119,10 +119,10 @@
         </div>
       </div>
       <div data-role="page" id="p3">
-        <div data-role="header">
-          <h1>News</h1>
+        <div class="header">
+          <h1>Termine</h1>
         </div>
-        <div data-role="content">
+        <div class="content" data-role="content">
           <p>Hier kommen die Inhalte hin</p>
           <p>
             Zurück zu <a href="#p1">Home</a>
@@ -134,7 +134,7 @@
       </div>
 
       <div data-role="page" id="p4">
-        <div data-role="header">
+        <div class="header">
           <h1>Seite zwei</h1>
         </div>
         <div data-role="content">
@@ -148,7 +148,7 @@
         </div>
       </div>
       <div data-role="page" id="p5">
-        <div data-role="header">
+        <div class="header">
           <h1>Seitentitel</h1>
         </div>
         <div data-role="content">
@@ -163,7 +163,7 @@
       </div>
 
       <div data-role="page" id="p6">
-        <div data-role="header">
+        <div class="header">
           <h1>Seite zwei</h1>
         </div>
         <div data-role="content">

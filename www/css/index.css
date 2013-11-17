@@ -105,14 +105,23 @@ h4
 }
 
 
+#appheader
+{
+	position:fixed;
+	width:100%;
+	bottom:90%;
+	height: 10%;
+	z-index: 10;
+	
+}
 #appfooter
 {
 	position:fixed;
-    width: 100%;
-    bottom: -350px;
-    height: 400px;
-    clear:both;
-    font-size: 11px;
+    	width: 100%;
+    	bottom: 0%;
+    	height: 10%;
+    	clear:both;
+    	font-size: 11px;
  	background: #00415E;
  	  
  	z-index: 1000;
@@ -121,16 +130,41 @@ h4
  	-webkit-transition: bottom 2s;
 	 -o-transition: bottom 2s;
 }
-#appheader
+
+
+.header
 {
 	position:fixed;
 	width:100%;
-	bottom:90%;
-	height: 10%;
+	background:#00415E;
+	height: 5%;
 	z-index: 10;
+	top=0%;
 }
 
+.endnode
+{
+	position:relative;
+	width:100%
+	bottom:0%;
+	height:0%;
+	background-color: #F0F0F0;
+	padding-top: 10%;
+	
+}
 
+.content
+{
+	
+}
+#clickPic
+{
+	
+}
+#Headline
+{
+	
+}
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;

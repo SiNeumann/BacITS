@@ -94,6 +94,18 @@ h4
 	 -o-transition: bottom 2s;
 }
 
+.infoUnit
+{
+	border-style:solid;
+	background-color: #009933;
+	width: 100%;
+	border-bottom-color: #000000;
+	border-bottom-width: 5px;
+	border-width: 5px;
+	border-color:#000000;
+}
+
+
 #ListElement
 {
 	width:100%
@@ -114,21 +126,20 @@ h4
 	z-index: 10;
 	
 }
-#appfooter
+.appfooter
 {
-	position:fixed;
+		position:fixed;
     	width: 100%;
     	bottom: 0%;
     	height: 10%;
-    	clear:both;
-    	font-size: 11px;
- 	background: #00415E;
+    	background-color:#00415E;
+    	font-size: 20px;
+    	color:#009933;
+    	text-align:center;
+ 	
  	  
  	z-index: 1000;
- 	transition: bottom 2s;
- 	-moz-transition: bottom 2s;
- 	-webkit-transition: bottom 2s;
-	 -o-transition: bottom 2s;
+ 	
 }
 
 

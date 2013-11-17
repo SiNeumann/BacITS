@@ -78,21 +78,24 @@ function AddContent(id)
 			//get latest Entries
 			var message=messages.item(i-1);
 			var header=message.getElementsByTagName("Headline");
-			
+			var div=document.createElement("div");
+			div.setAttribute("class","infoUnit");
 			var text=message.getElementsByTagName("Text");
 			var myH1 = document.createElement("h1");
 			var testTex= text.item(0).firstChild.data;
 			var headLine=header.item(0).firstChild.data;
 			var myText = document.createTextNode(headLine);
 			var imag=document.createElement("img");
-			var source='images/news'+i+'.jpg';
+			var source='images/'+ id + i+'.jpg';
 			imag.setAttribute("src", source);
 			imag.setAttribute("onclick", "displayRealContent('"+source+"')");               
 			imag.setAttribute("id","clickPic");
 			myH1.setAttribute("id","Headline");
+			
 			myH1.appendChild(myText);
-			elem.appendChild(myH1);
-			elem.appendChild(imag);
+			div.appendChild(myH1);
+			div.appendChild(imag);
+			elem.appendChild(div);
 		
 		}
 	var Endnode = document.createElement("h1");

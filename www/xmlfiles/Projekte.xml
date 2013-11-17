@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<News>
-    <Picture>
-        
-    </Picture>
+<Content>
+<Message>
+    
+    <Headline>
+       Wenn Pollen sprießen
+    </Headline>
     <Text>
-        Es gibt nix neues
+	Masterstudent ermöglicht automatische Identifikation von Pollenkeimlingen Bei dem Begriff „Pollen“ denkt vielleicht der eine oder die andere an die... 
     </Text>
-</News>
+</Message>
+<Message>
+    
+    <Headline>
+        Video Security
+    </Headline>
+    <Text>
+       Big Brother is watching you In kaum einer Metropole gibt es mehr Überwachungskameras als in London. Wer beispielsweise die U-Bahn benützt, wird nahezu... 
+    </Text>
+</Message>
+     <Message>
+    
+    <Headline>
+        Smarte Plattform
+    </Headline>
+    <Text>
+        ITS-Studierende entwickeln neue Plattform zur Analyse des eigenen Stromverbrauchsprofils Eine Person verbraucht im Jahr durchschnittlich 2.034... 
+    </Text>
+</Message>
+<Message>
+    
+    <Headline>
+        Smart eDucation
+    </Headline>
+    <Text>
+      Neue Technologien und Konzepte für den virtuellen, interaktiven Unterricht Für den Hörsaal der Zukunft reformieren ITS-Masterstudierende und ihre... 
+    </Text>
+</Message>
+<Message>
+    
+    <Headline>
+        Sicher vor Produktfälschungen
+    </Headline>
+    <Text>
+      Neues Track and Trace System Billige Produktimitate aus Asien überschwemmen den Markt. Wie kann man sich vor dem Kauf von Produktfälschungen schützen?... 
+    </Text>
+</Message>
+<Message>
+    
+    <Headline>
+       Satyros
+    </Headline>
+    <Text>
+       Der mobile Roboter Studierende bauten und entwickeln das autonome, mobile Roboter-Auto Satyros und macht Science Fiction zur Realität. 
+    </Text>
+</Message>
+</Content>

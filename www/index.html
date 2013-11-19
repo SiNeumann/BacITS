@@ -86,20 +86,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('news')" href="#p2">News</a>
+                <a onclick="AddContent('news')" href="#p2" id=nbar>News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3">Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4">Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5">Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
                 
               </li>
               <li>
-                <a onclick="AddContent('sudoko')" href="#p5">Sudoku</a>
+                <a onclick="AddContent('sudoko')" href="#p5" id=nbar>Sudoku</a>
               </li>
             </ul>
           </div>
@@ -109,7 +109,7 @@
       </div>
 <!-- hier kommen die einzelnen Subpages, die ID wird im Script zum Laden des XML verwendet bitte nicht daran rumspielen-->
        <div onactivate="displayMenu" data-role="page" id="p2">
-        <div class="header">
+        <div class="header" data-role="header">
           <h1>News</h1>
         </div>
         <div data-role="content">
@@ -121,7 +121,7 @@
         </div>
       </div>
       <div data-role="page" id="p3">
-        <div class="header">
+        <div class="header" data-role="header">
           <h1>Termine</h1>
         </div>
         <div class="content" data-role="content">
@@ -136,7 +136,7 @@
       </div>
 
       <div data-role="page" id="p4">
-        <div class="header">
+        <div class="header" data-role="header">
           <h1>Seite zwei</h1>
         </div>
         <div data-role="content">
@@ -150,7 +150,7 @@
         </div>
       </div>
       <div data-role="page" id="p5">
-        <div class="header">
+        <div class="header" data-role="header">
           <h1>Seitentitel</h1>
         </div>
         <div data-role="content">
@@ -165,7 +165,7 @@
       </div>
 
       <div data-role="page" id="p6">
-        <div class="header">
+        <div class="header" data-role="header">
           <h1>Seite zwei</h1>
         </div>
         <div data-role="content">

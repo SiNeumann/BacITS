@@ -1,6 +1,20 @@
 /**
  * 
  */
+//http://www.youtube.com/watch?v=PgWuIAP7olU
+jQuery(document).ready(function() {
+	$(showpage).on('swipeleft', swipeLeft);
+	$(showpage).on('swiperight', swipeRight);
+	
+	function swipeLeft(event) {
+		//$.mobile.changePage("#about", {transition: "slide"});
+		alert("halloleft");
+	}
+	function swipeRight(event) {
+		//$.mobile.changePage("#home", {transition: "slide", reverse: true});
+		alert("halloRight");
+	}
+});
 
 
 function displayMenu(txt)

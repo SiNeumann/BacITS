@@ -62,7 +62,7 @@ function displayRealContent(txt)
 	imag.setAttribute("src", source);
 	//imag.setAttribute("onclick", "displayRealContent('"+id+" "+i+"')");               
 	//imag.setAttribute("id","clickPic");
-	div=setAttribute("swipeleft","testswipe()");
+	div.setAttribute("swipeleft","testswipe()");
 	myH1.setAttribute("id","Headline");
 	myInnerdiv.appendChild(myText);
 	myH1.appendChild(myHeadline);

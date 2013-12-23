@@ -88,7 +88,15 @@ function displayRealContent(txt)
 	var count=split[1];
 	var id=split[0];
 	var xName="xmlfiles/"+id+".xml";
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	/*Kom_dAG
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");*/
+	var xDoc = getLocalContent('News');
+	
+	if(xDoc == null){
+		xDoc = downloadContent();
+	}
+	/*Andi Ende*/
+	
 	//Message ist eine Einheit im XML mit Text und Headline
 	var messages=xDoc.getElementsByTagName("Entry");
 	var message=messages.item(count-1);
@@ -211,7 +219,16 @@ function AddContent(id)
 	elem.innerHTML="";
 	//Hoffentlich ist das XMLFile vorhanden, sonst ist die Seite leer
 	var xName="xmlfiles/"+id+".xml";
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	
+		/*Kom_dAG
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");*/
+	var xDoc = getLocalContent('News');
+	
+	if(xDoc == null){
+		xDoc = downloadContent();
+	}
+	/*Andi Ende*/
+	
 	//Message ist eine Einheit im XML mit Text und Headline
 	var messages=xDoc.getElementsByTagName("Entry");
 	Maxcount=messages.length-1;

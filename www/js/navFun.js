@@ -136,7 +136,7 @@ function displayRealContent(txt)
 	var testTex= text.item(0).firstChild.data;
 	var headLine=header.item(0).firstChild.data;
 	if(image.item(0)!=null){
-	var zImagme=image.item(0).firstChild.data;
+	var zImage=image.item(0).firstChild.data;
 	}
 	var myHeadline = document.createTextNode(headLine);
 	var myText=document.createElement("div");
@@ -266,7 +266,7 @@ function AddContent(id)
 			var message=messages.item(i-1);
 			var header=message.getElementsByTagName("title");
 			var image=message.getElementsByTagName("image");
-			var zImagme=image.item(0).firstChild.data;
+			var zImage=image.item(0).firstChild.data;
 			var div=document.createElement("a");//Erzeuge ein div anschließen Klasse auf infoUnit setzen
 			div.setAttribute("class","infoUnit");
 			div.setAttribute("href","#showpage2");

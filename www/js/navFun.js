@@ -20,7 +20,7 @@ function removeElements(elem)
 	}*/
 	while(elem.firstChild)
 		{
-		   elem.removeChild(elem.firstChild)
+		   elem.removeChild(elem.firstChild);
 		}
 }
 
@@ -39,6 +39,12 @@ function displayMenu(txt)
 	
 }
 
+
+function replaceCdata( text)
+{
+	text  = text.replace("<![CDATA[", "").replace("]]>", "");
+	return text;
+}
 
 function ImageExist(url) 
 {
@@ -107,8 +113,8 @@ function displayRealContent(txt)
 	var count=split[1];
 	var id=split[0];
 	var xName="xmlfiles/"+id+".xml";
-	/*Kom_dAG
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");*/
+	
+	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
 	var xDoc = getLocalContent('News');
 	
 	if(xDoc == null){
@@ -131,16 +137,25 @@ function displayRealContent(txt)
 	
 	//XML Element werden hier ausgelesen...
 	var text=message.getElementsByTagName("shorttext");
+	var body=message.getElementsByTagName("body");
+	var bodytestext='';
+	if(body.item(0).firstChild.data!=null)
+		{
+			bodytestext=body.item(0).firstChild.data;
+			bodytestext=replaceCdata(bodytestext);
+		}
 	var myH1 = document.createElement("h1");
 	var myInnerdiv=document.createElement("div");
 	var testTex= text.item(0).firstChild.data;
 	var headLine=header.item(0).firstChild.data;
 	if(image.item(0)!=null){
-	var zImagme=image.item(0).firstChild.data;
+	var zImage=image.item(0).firstChild.data;
 	}
 	var myHeadline = document.createTextNode(headLine);
 	var myText=document.createElement("div");
-	testTex  = testTex.replace("<![CDATA[", "").replace("]]>", "");
+	var myBodyText=document.createElement("div");
+	myBodyText.innerHTML=bodytestext;
+	testTex  = replaceCdata(testTex);
 	myText.innerHTML=testTex;
 		//document.createTextNode(testTex);
 	var imag=document.createElement("img");
@@ -160,6 +175,7 @@ function displayRealContent(txt)
 	div.appendChild(myH1);
 	div.appendChild(imag);
 	div.appendChild(myText);
+	div.appendChild(myBodyText);
 	elem.appendChild(div);
 	/*if(frame=="showIt2")
 		{
@@ -246,8 +262,8 @@ function AddContent(id)
 	//Hoffentlich ist das XMLFile vorhanden, sonst ist die Seite leer
 	var xName="xmlfiles/"+id+".xml";
 	
-		/*Kom_dAG
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");*/
+		
+	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
 	var xDoc = getLocalContent('News');
 	
 	if(xDoc == null){
@@ -266,7 +282,7 @@ function AddContent(id)
 			var message=messages.item(i-1);
 			var header=message.getElementsByTagName("title");
 			var image=message.getElementsByTagName("image");
-			var zImagme=image.item(0).firstChild.data;
+			var zImage=image.item(0).firstChild.data;
 			var div=document.createElement("a");//Erzeuge ein div anschließen Klasse auf infoUnit setzen
 			div.setAttribute("class","infoUnit");
 			div.setAttribute("href","#showpage2");

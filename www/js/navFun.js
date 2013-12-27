@@ -40,6 +40,25 @@ function displayMenu(txt)
 }
 
 
+function ImageExist(url) 
+{
+	//inspired http://stackoverflow.com/questions/3646914/how-do-i-check-if-file-exists-in-jquery-or-javascript
+   var img = new Image();
+   img.src = url;
+   if(img.heigth!=0)
+	   {
+	   			return url;
+	   }
+   else{
+	   var source='images/default.jpg';
+	   return source;
+   }
+}
+
+
+
+
+
 function testswipe(txt)
 {
 	//alert("worked");
@@ -88,11 +107,20 @@ function displayRealContent(txt)
 	var count=split[1];
 	var id=split[0];
 	var xName="xmlfiles/"+id+".xml";
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	/*Kom_dAG
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");*/
+	var xDoc = getLocalContent('News');
+	
+	if(xDoc == null){
+		xDoc = downloadContent();
+	}
+	/*Andi Ende*/
+	
 	//Message ist eine Einheit im XML mit Text und Headline
 	var messages=xDoc.getElementsByTagName("Entry");
 	var message=messages.item(count-1);
 	var header=message.getElementsByTagName("title");
+	var image=message.getElementsByTagName("image");
 	var div=document.createElement("div");//Erzeuge ein div anschließen Klasse auf infoUnit setzen
 	div.setAttribute("class","showcontent");
 	div.setAttribute("id",txt);
@@ -107,13 +135,19 @@ function displayRealContent(txt)
 	var myInnerdiv=document.createElement("div");
 	var testTex= text.item(0).firstChild.data;
 	var headLine=header.item(0).firstChild.data;
+	if(image.item(0)!=null){
+	var zImagme=image.item(0).firstChild.data;
+	}
 	var myHeadline = document.createTextNode(headLine);
 	var myText=document.createElement("div");
 	testTex  = testTex.replace("<![CDATA[", "").replace("]]>", "");
 	myText.innerHTML=testTex;
 		//document.createTextNode(testTex);
 	var imag=document.createElement("img");
-	var source='images/'+ id + count+'.jpg';
+	//var source='images/'+ id + count+'.jpg';
+	var source=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
+		
+		//"http://its.fh-salzburg.ac.at/uploads/pics/"+zImage;
 	//...und anschließend in neue erzeugte Elemente gesetzt
 	//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 	imag.setAttribute("src", source);
@@ -211,9 +245,19 @@ function AddContent(id)
 	elem.innerHTML="";
 	//Hoffentlich ist das XMLFile vorhanden, sonst ist die Seite leer
 	var xName="xmlfiles/"+id+".xml";
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	
+		/*Kom_dAG
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");*/
+	var xDoc = getLocalContent('News');
+	
+	if(xDoc == null){
+		xDoc = downloadContent();
+	}
+	/*Andi Ende*/
+	
 	//Message ist eine Einheit im XML mit Text und Headline
 	var messages=xDoc.getElementsByTagName("Entry");
+	//var image=message.getElementsByTagName("image");
 	Maxcount=messages.length-1;
 	//Schleife anpassen nach länge von Messages
 	for(var i=1;i<Maxcount;i++)
@@ -221,6 +265,8 @@ function AddContent(id)
 			//get latest Entries
 			var message=messages.item(i-1);
 			var header=message.getElementsByTagName("title");
+			var image=message.getElementsByTagName("image");
+			var zImagme=image.item(0).firstChild.data;
 			var div=document.createElement("a");//Erzeuge ein div anschließen Klasse auf infoUnit setzen
 			div.setAttribute("class","infoUnit");
 			div.setAttribute("href","#showpage2");
@@ -233,7 +279,7 @@ function AddContent(id)
 			var headLine=header.item(0).firstChild.data;
 			var myText = document.createTextNode(headLine);
 			var imag=document.createElement("img");
-			var source='images/'+ id + i+'.jpg';
+			var source=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
 			//...und anschließend in neue erzeugte Elemente gesetzt
 			//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 			imag.setAttribute("src", source);

@@ -82,6 +82,15 @@
   </features>
 
 
+    <name>ITS App</name>
+
+    <description>
+        Eine App für den Studiengang ITS an der Fachhochschule Salzburg 
+    </description>
+
+    <author>
+        Neumman, Steinberger, Grün
+    </author>
   <access origin="*fh-salzburg.ac.at*"/>
 
 </widget>

@@ -37,3 +37,7 @@ Praktischer Teil:
 	Navigation (Wischgesten)
 	Laden und Speicherung der Daten
 	Auswerten und parsen der Daten
+	Debuggen
+	XML - ungültig bei sonderzeichen wenn kein cdata
+	
+	Arbeitsspeicher!

@@ -1,0 +1,37 @@
+Unser File zum Ideensammeln und austauschen!
+
+Bitte um Ergänzung...
+
+------------------------------------------------------------------------------------------------
+--To-Dos:
+
+Layout mal schön machen
+Die Kamera noch einbinden
+QR-Code Scanner
+Laden+Speichern der Daten fertigstellen (ich schreib dem Back gleich mal wegen den anderen XMLs)
+default-Bild einfügen
+default-Text/News einfügen
+
+
+
+
+------------------------------------------------------------------------------------------------
+--Struktur der Arbeit:
+
+Abstract
+
+Vorwort
+
+Theoretischer Teil über benutzte tools:
+	Cordova/Phonegap
+	jQuery/mobile
+	Github
+	HTML5/JS/CSS ?
+Praktischer Teil:
+	wie war das Arbeiten mit den Tools... (oder so...??)
+	Struktur der App
+	config.xml
+	Layout
+	Navigation (Wischgesten)
+	Laden und Speicherung der Daten
+	Auswerten und parsen der Daten

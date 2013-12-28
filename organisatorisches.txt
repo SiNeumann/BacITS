@@ -1,16 +1,17 @@
 Unser File zum Ideensammeln und austauschen!
 
-Bitte um Ergänzung...
+Bitte um Ergï¿½nzung...
 
 ------------------------------------------------------------------------------------------------
 --To-Dos:
 
-Layout mal schön machen
+Layout mal schï¿½n machen
 Die Kamera noch einbinden
 QR-Code Scanner
 Laden+Speichern der Daten fertigstellen (ich schreib dem Back gleich mal wegen den anderen XMLs)
-default-Bild einfügen
-default-Text/News einfügen
+default-Bild einfï¿½gen/schon erledigt /*Sigi*/
+default-Text/News einfï¿½gen//Warum wenns keine gibt werden keine angezeigt, aber ich kann im Zuge des Refactorting,
+das ich jetzt dann mache, eine Meldung einfÃ¼gen, das es aktuell keine News gibt./*Sigi*/
 
 
 
@@ -22,11 +23,12 @@ Abstract
 
 Vorwort
 
-Theoretischer Teil über benutzte tools:
+Theoretischer Teil ï¿½ber benutzte tools:
 	Cordova/Phonegap
 	jQuery/mobile
 	Github
-	HTML5/JS/CSS ?
+	HTML5/JS/CSS ? //Ich denke daraus kÃ¶nne wir 3 Punkte machen /*Sigi*/
+	XML /*Sigi*/
 Praktischer Teil:
 	wie war das Arbeiten mit den Tools... (oder so...??)
 	Struktur der App

@@ -42,30 +42,7 @@
 <preference name="phonegap-version" value="2.9.0" />
 <preference name="permissions" value="none"/>
 
-<!--
-  <features>
-    <feature name="Device">
-      <param name="wp-package" value="Device" onload="false"/>
-    </feature>
-    <feature name="Camera">
-      <param name="wp-package" value="Camera"/>
-    </feature>
-    <feature name="NetworkStatus">
-      <param name="wp-package" value="NetworkStatus"/>
-    </feature>
-    <feature name="File">
-      <param name="wp-package" value="File"/>
-    </feature>
-    <feature name="FileTransfer">
-      <param name="wp-package" value="FileTransfer"/>
-    </feature>
-    <feature name="SplashScreen">
-      <param name="wp-package" value="SplashScreen"/>
-    </feature>
-  </features>
--->
 
-  <feature name="http://api.phonegap.com/1.0/camera"/>
 
   <access origin="*fh-salzburg.ac.at*"/>
 

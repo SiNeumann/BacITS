@@ -19,68 +19,31 @@
 # under the License.
 #
 -->
-<widget>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "at.ac.fh-salzburg.app"
+        versionCode = "1" 
+        version     = "0.0.1" >
 
-  <features>
-    <feature name="Device">
-      <param name="wp-package" value="Device" onload="false"/>
-    </feature>
-    <feature name="Logger">
-      <param name="wp-package" value="Logger"/>
-    </feature>
-    <feature name="Compass">
-      <param name="wp-package" value="Compass" />
-    </feature>
-    <feature name="Accelerometer">
-      <param name="wp-package" value="Accelerometer"/>
-    </feature>
-    <feature name="Camera">
-      <param name="wp-package" value="Camera"/>
-    </feature>
-    <feature name="NetworkStatus">
-      <param name="wp-package" value="NetworkStatus"/>
-    </feature>
-    <feature name="Contacts">
-      <param name="wp-package" value="Contacts"/>
-    </feature>
-    <feature name="DebugConsole">
-      <param name="wp-package" value="DebugConsole"/>
-    </feature>
-    <feature name="Echo">
-      <param name="wp-package" value="Echo"/>
-    </feature>
-    <feature name="File">
-      <param name="wp-package" value="File"/>
-    </feature>
-    <feature name="FileTransfer">
-      <param name="wp-package" value="FileTransfer"/>
-    </feature>
-    <feature name="Geolocation">
-      <param name="wp-package" value="Geolocation"/>
-    </feature>
-    <feature name="Geolocation">
-      <param name="wp-package" value="Geolocation"/>
-    </feature>
-    <feature name="Media">
-      <param name="wp-package" value="Media"/>
-    </feature>
-    <feature name="Capture">
-      <param name="wp-package" value="Capture"/>
-    </feature>
-    <feature name="SplashScreen">
-      <param name="wp-package" value="SplashScreen"/>
-    </feature>
-    <feature name="Battery">
-      <param name="wp-package" value="Battery"/>
-    </feature>
-    <feature name="Globalization">
-      <param name="wp-package" value="Globalization"/>
-    </feature>
-    <feature name="InAppBrowser">
-      <param name="wp-package" value="InAppBrowser"/>
-    </feature>
-  </features>
+    <name>ITS App</name>
 
+    <description>
+        Eine App für den Studiengang ITS an der Fachhochschule Salzburg 
+    </description>
+
+    <author>
+        Neumann, Steinberger, Gruen
+    </author>
+
+<gap:platform name="ios" />
+<gap:platform name="android" />
+<gap:platform name="winphone" />
+
+<preference name="phonegap-version" value="2.9.0" />
+<preference name="permissions" value="none"/>
+
+<feature name="http://api.phonegap.com/1.0/camera"/>
+<feature name="http://api.phonegap.com/1.0/network"/>
 
   <access origin="*fh-salzburg.ac.at*"/>
 

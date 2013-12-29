@@ -51,10 +51,11 @@ function ImageExist(url)
 	//inspired http://stackoverflow.com/questions/3646914/how-do-i-check-if-file-exists-in-jquery-or-javascript
    var img = new Image();
    img.src = url;
-   if(img.heigth!=0)
-	   {
+   var h=img.height;
+   if(h!=0)
+   {
 	   			return url;
-	   }
+   }
    else{
 	   var source='images/default.jpg';
 	   return source;
@@ -102,6 +103,35 @@ function testswipe(txt)
 	
 }
 
+
+function GetElement(tag,container)
+{
+	try{
+	var message=container.getElementsByTagName(tag);
+	
+	if(message.item(0).firstChild.data!=null)
+		{
+		 var rtext=message.item(0).firstChild.data;
+		 rtext=replaceCdata( rtext);
+		 var textnode=document.createTextNode(rtext);
+		 var retDiv=document.createElement("div");
+		 retDiv.innerHTML=rtext;
+		 return retDiv
+		}
+	else
+	{
+		emptyDiv=document.createElement("div");
+		return emptyDiv;
+	}
+	}
+	catch(ex)
+	{
+		emptyDiv=document.createElement("div");
+		return emptyDiv;
+
+	}
+}
+
 function displayRealContent(txt)
 {
 
@@ -124,8 +154,12 @@ function displayRealContent(txt)
 	
 	//Message ist eine Einheit im XML mit Text und Headline
 	var messages=xDoc.getElementsByTagName("Entry");
+	
 	var message=messages.item(count-1);
-	var header=message.getElementsByTagName("title");
+	var bodyText=GetElement("body",message);
+	var headLine=GetElement("title",message);
+	var shortText=GetElement("shorttext",message);
+	
 	var image=message.getElementsByTagName("image");
 	var div=document.createElement("div");//Erzeuge ein div anschließen Klasse auf infoUnit setzen
 	div.setAttribute("class","showcontent");
@@ -135,74 +169,27 @@ function displayRealContent(txt)
 	removeElements(elem);
 	
 	
-	//XML Element werden hier ausgelesen...
-	var text=message.getElementsByTagName("shorttext");
-	var body=message.getElementsByTagName("body");
-	var bodytestext='';
-	if(body.item(0).firstChild.data!=null)
-		{
-			bodytestext=body.item(0).firstChild.data;
-			bodytestext=replaceCdata(bodytestext);
-		}
-	var myH1 = document.createElement("h1");
-	var myInnerdiv=document.createElement("div");
-	var testTex= text.item(0).firstChild.data;
-	var headLine=header.item(0).firstChild.data;
+
 	if(image.item(0)!=null){
 	var zImage=image.item(0).firstChild.data;
 	}
-	var myHeadline = document.createTextNode(headLine);
-	var myText=document.createElement("div");
-	var myBodyText=document.createElement("div");
-	myBodyText.innerHTML=bodytestext;
-	testTex  = replaceCdata(testTex);
-	myText.innerHTML=testTex;
-		//document.createTextNode(testTex);
+
 	var imag=document.createElement("img");
-	//var source='images/'+ id + count+'.jpg';
+
 	var source=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
 		
 		//"http://its.fh-salzburg.ac.at/uploads/pics/"+zImage;
 	//...und anschließend in neue erzeugte Elemente gesetzt
 	//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 	imag.setAttribute("src", source);
-	//imag.setAttribute("onclick", "displayRealContent('"+id+" "+i+"')");               
-	//imag.setAttribute("id","clickPic");
-	//div.setAttribute("swipeleft","testswipe()");
-	myH1.setAttribute("id","Headline");
-	myInnerdiv.appendChild(myText);
-	myH1.appendChild(myHeadline);
-	div.appendChild(myH1);
+
+	headLine.setAttribute("id","Headline");
+	div.appendChild(headLine);
 	div.appendChild(imag);
-	div.appendChild(myText);
-	div.appendChild(myBodyText);
+	div.appendChild(shortText);
+	div.appendChild(bodyText);
 	elem.appendChild(div);
-	/*if(frame=="showIt2")
-		{
-		
-		
-	if(count==Maxcount)
-		{	
-			left=count-1;
-			DisplayRealContent(id + " "+left ,"showIt1");
-			DisplayRealContent(id+" "+0 ,"showIt3" );
-		}
-	else if (count==0)
-		{
-		      left=Maxcount;
-		      right=count+1;
-		DisplayRealContent(id + " "+left ,"showIt1");
-		DisplayRealContent(id+" "+right ,"showIt3" );
-		}
-	else
-	{	
-		left=count-1;
-		right=count+1;
-		DisplayRealContent(id + " "+left ,"showIt1");
-		DisplayRealContent(id+" "+right ,"showIt3" );
-	}
-		}*/
-		
+	
 	
 	
 }

@@ -40,8 +40,9 @@
 <gap:platform name="winphone" />
 
 <preference name="phonegap-version" value="2.9.0" />
+<preference name="permissions" value="none"/>
 
-
+<!--
   <features>
     <feature name="Device">
       <param name="wp-package" value="Device" onload="false"/>
@@ -62,8 +63,9 @@
       <param name="wp-package" value="SplashScreen"/>
     </feature>
   </features>
+-->
 
-
+  <feature name="http://api.phonegap.com/1.0/camera"/>
 
   <access origin="*fh-salzburg.ac.at*"/>
 

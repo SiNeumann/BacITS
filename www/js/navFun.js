@@ -173,13 +173,13 @@ function displayRealContent(txt)
 
 	var imag=document.createElement("img");
 
-	var source=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
+	imag=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
 		
 		//"http://its.fh-salzburg.ac.at/uploads/pics/"+zImage;
 	//...und anschließend in neue erzeugte Elemente gesetzt
 	//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
-	imag.setAttribute("src", source);
-	imag.setAttribute("class","sc_img")
+	//imag.setAttribute("src", source);
+	imag.setAttribute("class","sc_img");
 
 	headLine.setAttribute("id","Headline");
 	div.appendChild(headLine);
@@ -248,8 +248,8 @@ function AddContent(id)
 	var xName="xmlfiles/"+id+".xml";
 	
 		
-	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent('News');
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	/*var xDoc = getLocalContent('News');
 	
 	if(xDoc == null){
 		xDoc = downloadContent();
@@ -283,14 +283,19 @@ function AddContent(id)
 			imag=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
 			//...und anschließend in neue erzeugte Elemente gesetzt
 			//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
-			imag.setAttribute("src", source);
+			//imag.setAttribute("src", source);
 			div.setAttribute("onclick", "displayRealContent('"+id+" "+i+"')");            
 			imag.setAttribute("id","clickPic");
 			myH1.setAttribute("id","Headline");
 			
 			myH1.appendChild(myText);
 			div.appendChild(myH1);
+			
 			div.appendChild(imag);
+			if(imag.complete==false)
+				{
+					imag.src='images/default.jpg';
+				}
 			elem.appendChild(div);
 		
 		}

@@ -24,20 +24,7 @@ function removeElements(elem)
 		}
 }
 
-function displayMenu(txt)
-{
-	//hier hab ich ein bißchen gebastelt, kann weg
-	alert(txt);
-	xmlDoc=loadXMLString(txt);
-	var news= xmlDoc.getElementsByName('News');
-	for(var i=0;i<news.length;i++)
-		{
-			element=document.getElementsById('newssite');
-			element.InnerXml="Test";
-		}
-	 
-	
-}
+
 
 
 function replaceCdata( text)

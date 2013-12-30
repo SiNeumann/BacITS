@@ -181,6 +181,7 @@ function displayRealContent(txt)
 	//...und anschließend in neue erzeugte Elemente gesetzt
 	//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 	imag.setAttribute("src", source);
+	imag.setAttribute("class","sc_img")
 
 	headLine.setAttribute("id","Headline");
 	div.appendChild(headLine);

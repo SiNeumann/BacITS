@@ -180,7 +180,8 @@ function displayRealContent(txt)
 	//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 	//imag.setAttribute("src", source);
 	imag.setAttribute("class","sc_img");
-
+	var sideHeader=document.getElementById("SubNews");
+	sideHeader.innerHTML=headLine.innerHTML;
 	headLine.setAttribute("id","Headline");
 	div.appendChild(headLine);
 	div.appendChild(imag);

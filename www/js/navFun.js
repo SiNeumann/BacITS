@@ -43,6 +43,7 @@ function ImageExist(url)
 }
 
 function scanCode(){
+	try{
 var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
 scanner.scan(
@@ -56,6 +57,12 @@ scanner.scan(
        alert("Scanning failed: " + error);
    }
 );
+	}
+	catch(ex)
+	{
+		alert("qr geht nicht");
+		alert(ex);
+	}
 }
 
 function testswipe(txt)

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!--
        Licensed to the Apache Software Foundation (ASF) under one
        or more contributor license agreements.  See the NOTICE file
@@ -17,7 +17,7 @@
        specific language governing permissions and limitations
        under the License.
 -->
-<html manifest="demo.appcache">
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="format-detection" content="telephone=no" />
@@ -31,6 +31,8 @@
       <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
       <script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
 	  <script type="text/javascript" src="js/storage.js"></script>
+	  <script type="text/javascript" src="js/camera.js"></script>
+	  <script type="text/javascript" src="js/html5-qrcode.min.js"></script> 
       <script>
 		$.support.cors = true; //Andi
 		
@@ -50,7 +52,8 @@
 		function onDeviceReady() {
 			downloadContent();
       }
-	  */
+	 */
+
 	  downloadContent();
 	</script>
 
@@ -68,25 +71,19 @@
         $( "[data-role='header'], [data-role='footer']" ).toolbar();
         });
       </script>
-      <script>
-      	function ddd () {
-      		alert("My First JavaScript");
-			
-		  }
-      </script>
       <script type="text/javascript" src="js/navFun.js" > </script>
     </head>
     <body>
 
 
       <div data-role="page" id="p1">
-        <div id=appheader data-role="header">
+        <div id="appheader" data-role="header">
           <h1>ITS APP</h1>
         </div>
-        <div id="main" data-role="page" >
+        <!-- div id="main" data-role="page" >
         	<ul datarole="" ></ul>
         	
-        </div>
+        </div -->
          <!-- ListenMenu aus Jquery ruft Addcontent auf bitte nicht am Funktionsaufruf rumspielen-->
         <div  id="ListElement" data-role="content">
         
@@ -107,6 +104,11 @@
               <a onclick="AddContent('sudoku')" href="#p1">SUDOKU</a>
               
             </li>
+			<li>
+              <a onclick="takePic()" href="#p6">CAM</a>
+			  <!-- a href="#p6">CAM</a -->
+              
+            </li>
           </ul>
 
 
@@ -120,20 +122,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a  href="#p1" id=nbar>Mehr...</a>
+                <a  href="#p1" id="nbar">Mehr...</a>
               </li>
             </ul>
           </div>
@@ -142,7 +144,7 @@
         <!-- /footer -->
       </div>
 <!-- hier kommen die einzelnen Subpages, die ID wird im Script zum Laden des XML verwendet bitte nicht daran rumspielen-->
-       <div  data-role="page" id="p2">
+       <div onactivate="displayMenu" data-role="page" id="p2">
         <div class="header" data-role="header">
           <h1>News</h1>
         </div>
@@ -154,20 +156,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a  href="#p1" id=nbar>Mehr</a>
+                <a  href="#p1" id="nbar">Mehr</a>
               </li>
             </ul>
           </div>
@@ -188,20 +190,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a  href="#p1" id=nbar>Mehr...</a>
+                <a  href="#p1" id="nbar">Mehr...</a>
               </li>
             </ul>
           </div>
@@ -214,7 +216,7 @@
           <h1>Seite zwei</h1>
         </div>
         <div data-role="content">
-          <p id=jobs >Projekte</p>
+          <p id="jobs" >Projekte</p>
           <p>
             Zurück zu <a href="#p1">Home</a>
           </p>
@@ -223,20 +225,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a  href="#p1" id=nbar>Mehr...</a>
+                <a  href="#p1" id="nbar">Mehr...</a>
               </li>
             </ul>
           </div>
@@ -248,7 +250,7 @@
           <h1>Seitentitel</h1>
         </div>
         <div data-role="content">
-          <p id=Projekte >Hier kommen die Inhalte hin</p>
+          <p id="Projekte" >Hier kommen die Inhalte hin</p>
           <p>
             Zurück zu <a href="#p1">Home</a>
           </p>
@@ -257,20 +259,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a  href="#p1" id=nbar>More...</a>
+                <a  href="#p1" id="nbar">More...</a>
               </li>
             </ul>
           </div>
@@ -284,6 +286,15 @@
           <h1>Seite zwei</h1>
         </div>
         <div data-role="content">
+			<div class="center" id="reader" style="width:300px;height:250px;">
+			</div>
+			<h6 class="center">Result</h6>
+			<span id="read" class="center"></span>
+			<h6 class="center">Read Error (Debug only)</h6>
+			<span id="read_error" class="center"></span>
+			<br>
+			<h6 class="center">Video Error</h6>
+			<span id="vid_error" class="center"></span>
           <p>Hier kommen die Inhalte hin</p>
           <p>
             Zurück zu <a href="#p1">Home</a>
@@ -293,20 +304,20 @@
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a href="#p1" id=nbar>Sudoku</a>
+                <a href="#p1" id="nbar">Sudoku</a>
               </li>
             </ul>
           </div>
@@ -316,27 +327,27 @@
       
 
      
-      <div data-role="page" id="showpage2"  }>
+      <div data-role="page" id="showpage2"  />
       	<div class="showcontent" id="showIt2" data-role="content">
       	</div>
       	<div data-role="footer" data-id="foo1" data-position="fixed">
           <div data-role="navbar">
             <ul>
               <li>
-                <a onclick="AddContent('News')" href="#p2" id=nbar>News</a>
+                <a onclick="AddContent('News')" href="#p2" id="nbar">News</a>
               </li>
               <li>
-                <a onclick="AddContent('termine')" href="#p3" id=nbar>Termine</a>
+                <a onclick="AddContent('termine')" href="#p3" id="nbar">Termine</a>
               </li>
               <li>
-                <a onclick="AddContent('jobs')" href="#p4" id=nbar>Jobs</a>
+                <a onclick="AddContent('jobs')" href="#p4" id="nbar">Jobs</a>
               </li>
               <li>
-                <a onclick="AddContent('Projekte')" href="#p5" id=nbar>Projekte</a>
+                <a onclick="AddContent('Projekte')" href="#p5" id="nbar">Projekte</a>
                 
               </li>
               <li>
-                <a href="#p1" id=nbar>Mehr...</a>
+                <a href="#p1" id="nbar">Mehr...</a>
               </li>
             </ul>
           </div>

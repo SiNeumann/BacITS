@@ -31,15 +31,13 @@ function ImageExist(url)
 	//inspired http://stackoverflow.com/questions/3646914/how-do-i-check-if-file-exists-in-jquery-or-javascript
    var img = new Image();
    img.src = url;
-   var h=img.height;
-   if(h!=0)
-   {
-	   			return url;
-   }
-   else{
-	   var source='images/default.jpg';
-	   return source;
-   }
+  
+   img.onerror = function () {
+     
+     this.src ='images/default.jpg'; // place your error.png image instead
+   };
+   return img;
+
 }
 
 function scanCode(){
@@ -282,7 +280,7 @@ function AddContent(id)
 			var headLine=header.item(0).firstChild.data;
 			var myText = document.createTextNode(headLine);
 			var imag=document.createElement("img");
-			var source=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
+			imag=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
 			//...und anschließend in neue erzeugte Elemente gesetzt
 			//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 			imag.setAttribute("src", source);

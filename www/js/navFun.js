@@ -248,8 +248,8 @@ function AddContent(id)
 	var xName="xmlfiles/"+id+".xml";
 	
 		
-	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	/*var xDoc = getLocalContent('News');
+	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	var xDoc = getLocalContent('News');
 	
 	if(xDoc == null){
 		xDoc = downloadContent();

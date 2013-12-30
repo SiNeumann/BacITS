@@ -144,7 +144,7 @@
         <!-- /footer -->
       </div>
 <!-- hier kommen die einzelnen Subpages, die ID wird im Script zum Laden des XML verwendet bitte nicht daran rumspielen-->
-       <div onactivate="displayMenu" data-role="page" id="p2">
+       <div  data-role="page" id="p2">
         <div class="header" data-role="header">
           <h1>News</h1>
         </div>
@@ -180,11 +180,12 @@
         <div class="header" data-role="header">
           <h1>Termine</h1>
         </div>
-        <div class="content" data-role="content">
+        <div  class="content" data-role="content">
           <p>Hier kommen die Inhalte hin</p>
           <p>
             Zurück zu <a href="#p1">Home</a>
           </p>
+          <a onclick="scanCode()">Scan QRcode</a>
         </div>
         <div data-role="footer" data-id="foo1" data-position="fixed">
           <div data-role="navbar">

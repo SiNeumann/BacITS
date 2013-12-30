@@ -10,14 +10,7 @@ var Maxcount;
 
 function removeElements(elem)
 {
-	/*if(elem.childElementCount>0)
-	{
-			var max=elem.childElementCount;
-			for(var i=0;i<max;i++)
-				{
-					elem.removeChild(elem.childNodes[0]);
-				}
-	}*/
+
 	while(elem.firstChild)
 		{
 		   elem.removeChild(elem.firstChild);
@@ -49,9 +42,21 @@ function ImageExist(url)
    }
 }
 
+function scanCode(){
+var scanner = cordova.require("cordova/plugin/BarcodeScanner");
 
-
-
+scanner.scan(
+   function (result) {
+       alert("We got a barcode\n" +
+             "Result: " + result.text + "\n" +
+             "Format: " + result.format + "\n" +
+             "Cancelled: " + result.cancelled);
+   }, 
+   function (error) {
+       alert("Scanning failed: " + error);
+   }
+);
+}
 
 function testswipe(txt)
 {
@@ -103,7 +108,7 @@ function GetElement(tag,container)
 		 var textnode=document.createTextNode(rtext);
 		 var retDiv=document.createElement("div");
 		 retDiv.innerHTML=rtext;
-		 return retDiv
+		 return retDiv;
 		}
 	else
 	{

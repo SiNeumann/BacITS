@@ -5,7 +5,7 @@
 
 var actPage;
 var Maxcount;
-
+var defaultMessage="Es sind keine Inhalte vorhanden";
 
 
 function removeElements(elem)
@@ -30,10 +30,20 @@ function ImageExist(url)
 {
 	//inspired http://stackoverflow.com/questions/3646914/how-do-i-check-if-file-exists-in-jquery-or-javascript
    var img = new Image();
-   img.src = url;
+   var checkJpg=url.indexOf(".jpg");
+   var checkPng=url.indexOf(".png");
+   if(checkPng!=-1||checkJpg!=-1)
+   {
+	   img.src = url;
+   }
+   else
+   {
+	// alert("Couldnt Load");
+	 img.src=  'images/default.jpg'; 
+   }
   
    img.onerror = function () {
-     
+	 
      this.src ='images/default.jpg'; // place your error.png image instead
    };
    return img;
@@ -261,6 +271,10 @@ function AddContent(id)
 	var messages=xDoc.getElementsByTagName("Entry");
 	//var image=message.getElementsByTagName("image");
 	Maxcount=messages.length-1;
+	if(Maxcount==0)
+	{
+		elem.innerHTML=defaultMessage;
+	}
 	//Schleife anpassen nach länge von Messages
 	for(var i=1;i<Maxcount;i++)
 		{
@@ -293,10 +307,7 @@ function AddContent(id)
 			div.appendChild(myH1);
 			
 			div.appendChild(imag);
-			if(imag.complete==false)
-				{
-					imag.src='images/default.jpg';
-				}
+			
 			elem.appendChild(div);
 		
 		}

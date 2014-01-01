@@ -26,7 +26,7 @@ Vorwort
 Theoretischer Teil ï¿½ber benutzte tools:
 	Cordova/Phonegap
 	jQuery/mobile
-	Github
+	Github //hab ich jetzt die erste Seite geschrieben /*Sigi*/
 	HTML5/JS/CSS ? //Ich denke daraus kÃ¶nne wir 3 Punkte machen /*Sigi*/
 	XML /*Sigi*/
 Praktischer Teil:
@@ -38,6 +38,7 @@ Praktischer Teil:
 	Laden und Speicherung der Daten
 	Auswerten und parsen der Daten
 	Debuggen
-	XML - ungültig bei sonderzeichen wenn kein cdata
+	XML - ungï¿½ltig bei sonderzeichen wenn kein cdata
+	Einbinden von Plugins, Beispiel QR-Code
 	
 	Arbeitsspeicher!

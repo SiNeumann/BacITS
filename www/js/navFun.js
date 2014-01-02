@@ -148,14 +148,13 @@ function displayRealContent(txt)
 		{
 			frame="showIt2";
 		}*/
-	RemoveContentFromSubsites();
 	var split=txt.split(" ");
 	var count=split[1];
 	var id=split[0];
 	var xName="xmlfiles/"+id+".xml";
 	
 	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent('News');
+	var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();
@@ -252,32 +251,9 @@ else // Internet Explorer
   }
 return xmlDoc;
 }
-
-function RemoveContentFromSubsites()
-{
-	try{
-	 var identifier = new Array("News","Studiengang","Projekte","Termine","Jobs");
-	 for(i=0;i<identifier.length;i++)
-	 	{
-		 	try{
-		 	elem=document.getElementById(identifier.item(i));
-		 	elem.innerHTML="";
-		 	}
-		 	catch(ex)
-		 	{
-		 		
-		 	}
-		 	
-		}
-	}
-	catch(ex2){}
-}
-
-
 function AddContent(id)
 {
 	//nimmt ID eines Elements 
-	RemoveContentFromSubsites();
 	elem=document.getElementById(id);
 	//Rücksetzen des Inhalts soll anschließend geladen werden
 	elem.innerHTML="";
@@ -286,7 +262,7 @@ function AddContent(id)
 	
 		
 	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent('News');
+	var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();

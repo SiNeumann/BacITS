@@ -32,9 +32,7 @@ function ImageExist(url)
    var img = new Image();
    var checkJpg=url.indexOf(".jpg");
    var checkPng=url.indexOf(".png");
-   var checkJPG=url.indexOf(".JPG");
-   var checkjpeg=url.indexOf(".jpeg");
-   if(checkPng!=-1||checkJpg!=-1||checkJPG!=-1||checkjpeg!=-1)
+   if(checkPng!=-1||checkJpg!=-1)
    {
 	   img.src = url;
    }

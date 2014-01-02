@@ -152,7 +152,7 @@ function displayRealContent(txt)
 	var xName="xmlfiles/"+id+".xml";
 	
 	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent('News');
+	var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();
@@ -260,7 +260,7 @@ function AddContent(id)
 	
 		
 	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent('News');
+	var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();

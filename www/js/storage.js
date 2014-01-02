@@ -1,4 +1,18 @@
-﻿function getStorage(type){
+﻿/*mögliche types:
+	
+	News
+	Studiengang
+	Projekte
+	Termine
+	Jobs
+
+*/
+
+identifier = new Array("News"); //,"Studiengang","Projekte","Termine","Jobs");
+
+
+
+function getStorage(type){
 	var x = localStorage.getItem(type);
 	return x;
 }
@@ -51,20 +65,20 @@ function textToXML ( text ) {
 
 
 
-function downloadContent(){
+function downloadContent(identifier){
 	$.ajax({
       type: "GET",
-      url: "http://its.fh-salzburg.ac.at/mobileAppInterface/Controller.class.php?Section=News",
+      url: "http://its.fh-salzburg.ac.at/mobileAppInterface/Controller.class.php?Section="+identifier,
       dataType: "xml",
       success: function (xml) {
 
       var sXML = XMLtoText(xml);
-      writeStorage("News", sXML);
+      writeStorage(identifier, sXML);
 		return xml;
       }, //success
 
       error: function(xhr, ajaxOptions, thrownError){
-		return getLocalContent("News");
+		return getLocalContent(identifier);
       }//Error
       });
 }

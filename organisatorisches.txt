@@ -24,20 +24,21 @@ Abstract
 Vorwort
 
 Theoretischer Teil ï¿½ber benutzte tools:
-	Cordova/Phonegap
+	Cordova/Phonegap /*Andi*/
 	jQuery/mobile
-	Github
+	Github //hab ich jetzt die erste Seite geschrieben /*Sigi*/
 	HTML5/JS/CSS ? //Ich denke daraus kÃ¶nne wir 3 Punkte machen /*Sigi*/
 	XML /*Sigi*/
 Praktischer Teil:
 	wie war das Arbeiten mit den Tools... (oder so...??)
 	Struktur der App
-	config.xml
+	config.xml /*Andi*/
 	Layout
 	Navigation (Wischgesten)
-	Laden und Speicherung der Daten
+	Laden und Speicherung der Daten /*Andi*/
 	Auswerten und parsen der Daten
 	Debuggen
-	XML - ungültig bei sonderzeichen wenn kein cdata
+	XML - ungï¿½ltig bei sonderzeichen wenn kein cdata
+	Einbinden von Plugins, Beispiel QR-Code /*Andi*/
 	
 	Arbeitsspeicher!

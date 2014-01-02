@@ -12,6 +12,7 @@ Laden+Speichern der Daten fertigstellen (ich schreib dem Back gleich mal wegen d
 default-Bild einf�gen/schon erledigt /*Sigi*/
 default-Text/News einf�gen//Warum wenns keine gibt werden keine angezeigt, aber ich kann im Zuge des Refactorting,
 das ich jetzt dann mache, eine Meldung einfügen, das es aktuell keine News gibt./*Sigi*/
+Splashscreen und Icon der App
 
 
 

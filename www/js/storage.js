@@ -68,7 +68,7 @@ function textToXML ( text ) {
 function downloadContent(identifier){
 	$.ajax({
       type: "GET",
-      url: "http://its.fh-salzburg.ac.at/mobileAppInterface/Controller.class.php?Section="+identifier; //Strichpunkt
+      url: "http://its.fh-salzburg.ac.at/mobileAppInterface/Controller.class.php?Section="+identifier,
       dataType: "xml",
       success: function (xml) {
 

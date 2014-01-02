@@ -17,7 +17,25 @@ function removeElements(elem)
 		}
 }
 
-
+function RemoveContentFromSubsites()
+{
+	try{
+	 var identifier = new Array("News","Studiengang","Projekte","Termine","Jobs");
+	 for(i=0;i<identifier.length;i++)
+	 	{
+		 	try{
+		 	elem=document.getElementById(identifier.item(i));
+		 	elem.innerHTML="";
+		 	}
+		 	catch(ex)
+		 	{
+		 		
+		 	}
+		 	
+		}
+	}
+	catch(ex2){}
+}
 
 
 function replaceCdata( text)
@@ -32,7 +50,9 @@ function ImageExist(url)
    var img = new Image();
    var checkJpg=url.indexOf(".jpg");
    var checkPng=url.indexOf(".png");
-   if(checkPng!=-1||checkJpg!=-1)
+   var checkJPG=url.indexOf(".JPG");
+   var checkjpeg=url.indexOf(".jpeg");
+   if(checkPng!=-1||checkJpg!=-1||checkJPG!=-1||checkjpeg!=-1)
    {
 	   img.src = url;
    }
@@ -146,6 +166,7 @@ function displayRealContent(txt)
 		{
 			frame="showIt2";
 		}*/
+	RemoveContentFromSubsites();
 	var split=txt.split(" ");
 	var count=split[1];
 	var id=split[0];
@@ -252,6 +273,7 @@ return xmlDoc;
 function AddContent(id)
 {
 	//nimmt ID eines Elements 
+	RemoveContentFromSubsites();
 	elem=document.getElementById(id);
 	//Rücksetzen des Inhalts soll anschließend geladen werden
 	elem.innerHTML="";

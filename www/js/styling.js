@@ -1,27 +1,27 @@
 /*
-* Javascript-Funktionen zur Unterstï¿½tzung der CSS-Formatierungen
+* Javascript-Funktionen zur Unterstützung der CSS-Formatierungen
 */
 
-/* Beim Laden des Fensters soll die Hï¿½he ermittelt werden.
-*  Danach wird die Hï¿½he des Headers berechnet.
+/* Beim Laden des Fensters soll die Höhe ermittelt werden.
+*  Danach wird die Höhe des Headers berechnet.
 */
 jQuery(window).load(function setElementsLoad(){
 	
-	//Aktuelle Hï¿½he des Fensters/Bildschirmes
+	//Aktuelle Höhe des Fensters/Bildschirmes
 	$currentHeight = null;
 	$currentHeight = $(window).height();	
 	
 	$HeightListElements = null;
 	$HeightListElements = $(".ui-listview").height();
 		
-	//Hï¿½he des Headers in der Startseite
+	//Höhe des Headers in der Startseite
 	$headerHeightMain = null;
-	//Hï¿½he des Headers in den Unterseiten
+	//Höhe des Headers in den Unterseiten
 	$headerHeightSub = null;
 	
 	
 	/*
-	* Berechnungen der Hï¿½he
+	* Berechnungen der Höhe
 	*/
 	//Header in der Hauptseite soll 10% des Bildschirmes einnehmen
 	$headerHeightMain = $currentHeight/10;
@@ -39,7 +39,7 @@ jQuery(window).load(function setElementsLoad(){
 	}
 	
 	/*
-	* Setzten der Hï¿½hen in der CSS-Anweisung
+	* Setzten der Höhen in der CSS-Anweisung
 	*/
 	$( "#appheader" ).css("height", $headerHeightMain+"px");
 	$( ".header" ).css("height", $headerHeightSub+"px");
@@ -56,23 +56,23 @@ jQuery(window).load(function setElementsLoad(){
 	
 });
 
-/* Beim ï¿½ndern der Grï¿½ï¿½e des Fensters (von hoch auf quer und 
-*  umgekehrt) soll die Hï¿½he ermittelt werden.
-*  Danach wird die Hï¿½he des Headers berechnet.
+/* Beim Ändern der Größe des Fensters (von hoch auf quer und 
+*  umgekehrt) soll die Höhe ermittelt werden.
+*  Danach wird die Höhe des Headers berechnet.
 */
 jQuery(window).resize(function setHeaderHightResize(){
 	
-	//Hï¿½he des Headers in der Startseite
+	//Höhe des Headers in der Startseite
 	$headerHeightMain = null;
-	//Hï¿½he des Headers in den Unterseiten
+	//Höhe des Headers in den Unterseiten
 	$headerHeightSub = null;
 	
-	//Aktuelle Hï¿½he des Fensters/Bildschirmes
+	//Aktuelle Höhe des Fensters/Bildschirmes
 	$currentHeight = null;
 	$currentHeight = $(window).height();
 	
 	/*
-	* Berechnungen der Hï¿½he
+	* Berechnungen der Höhe
 	*/
 	//Header in der Hauptseite soll 10% des Bildschirmes einnehmen
 	$headerHeightMain = $currentHeight/10;
@@ -90,7 +90,7 @@ jQuery(window).resize(function setHeaderHightResize(){
 	}
 	
 	/*
-	* Setzten der Hï¿½hen in der CSS-Anweisung
+	* Setzten der Höhen in der CSS-Anweisung
 	*/
 	$( "#appheader" ).css("height", $headerHeightMain+"px");
 	$( ".header" ).css("height", $headerHeightSub+"px");
@@ -105,7 +105,7 @@ jQuery(window).resize(function setHeaderHightResize(){
 		$positionListElements=100;
 	}
 	
-	//$( "#ListElement" ).css("padding-top", $positionListElements+"px");
+	$( "#ListElement" ).css("padding-top", $positionListElements+"px");
 	
 });
 

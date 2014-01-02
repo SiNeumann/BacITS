@@ -8,7 +8,7 @@
 
 */
 
-identifier = new Array("News"); //,"Studiengang","Projekte","Termine","Jobs");
+ var identifier = new Array("News"); //,"Studiengang","Projekte","Termine","Jobs");
 
 
 
@@ -65,20 +65,22 @@ function textToXML ( text ) {
 
 
 
-function downloadContent(identifier){
+function downloadContent(type){
+	
+	
 	$.ajax({
       type: "GET",
-      url: "http://its.fh-salzburg.ac.at/mobileAppInterface/Controller.class.php?Section="+identifier,
+      url: "http://its.fh-salzburg.ac.at/mobileAppInterface/Controller.class.php?Section=" + type,
       dataType: "xml",
       success: function (xml) {
 
       var sXML = XMLtoText(xml);
-      writeStorage(identifier, sXML);
+      writeStorage(type, sXML);
 		return xml;
       }, //success
 
       error: function(xhr, ajaxOptions, thrownError){
-		return getLocalContent(identifier);
+		return getLocalContent(type);
       }//Error
       });
 }

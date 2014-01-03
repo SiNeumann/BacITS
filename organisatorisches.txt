@@ -25,7 +25,7 @@ Abstract
 Vorwort
 
 Theoretischer Teil �ber benutzte tools:
-	Cordova/Phonegap /*Andi*/
+	Cordova/Phonegap/Phonegap build/... /*Andi*/
 	jQuery/mobile
 	Github //hab ich jetzt die erste Seite geschrieben /*Sigi*/
 	HTML5/JS/CSS ? //Ich denke daraus könne wir 3 Punkte machen /*Sigi*/

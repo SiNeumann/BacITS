@@ -13,7 +13,7 @@ default-Bild einf�gen/schon erledigt /*Sigi*/
 default-Text/News einf�gen//Warum wenns keine gibt werden keine angezeigt, aber ich kann im Zuge des Refactorting,
 das ich jetzt dann mache, eine Meldung einfügen, das es aktuell keine News gibt./*Sigi*/
 Splashscreen und Icon der App
-
+Werbung vom Studiengang!!!
 
 
 
@@ -25,7 +25,7 @@ Abstract
 Vorwort
 
 Theoretischer Teil �ber benutzte tools:
-	Cordova/Phonegap/Phonegap build/... /*Andi*/
+	Cordova/Phonegap/Phonegap build/Entstehung/wie benutzt man es/... /*Andi*/
 	jQuery/mobile
 	Github //hab ich jetzt die erste Seite geschrieben /*Sigi*/
 	HTML5/JS/CSS ? //Ich denke daraus könne wir 3 Punkte machen /*Sigi*/

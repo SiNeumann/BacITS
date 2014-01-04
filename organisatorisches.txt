@@ -37,6 +37,7 @@ Praktischer Teil:
 	Layout
 	Navigation (Wischgesten)
 	Laden und Speicherung der Daten /*Andi*/
+	Image handling und gültige Formate in IOS,Android und Windows/*Sigi*/ ich schreib schon dran
 	Auswerten und parsen der Daten
 	Debuggen
 	XML - ung�ltig bei sonderzeichen wenn kein cdata

@@ -306,18 +306,20 @@ function AddContent(id)
 			var image=message.getElementsByTagName("image");
 			var zImage=image.item(0).firstChild.data;
 			var div=document.createElement("a");//Erzeuge ein div anschließen Klasse auf infoUnit setzen
-			div.setAttribute("class","infoUnit");
+			//div.setAttribute("class","infoUnit");
+			var Listelement=document.createElement("li");
 			div.setAttribute("href","#showpage2");
-			
+			Listelement.appendChild(div);
 			//XML Element werden hier ausgelesen...
 			var text=message.getElementsByTagName("shorttext");
-			var myH1 = document.createElement("h1");
+			var myH1 = document.createElement("h2");
 			
 			var testTex= text.item(0).firstChild.data;
 			var headLine=header.item(0).firstChild.data;
 			var myText = document.createTextNode(headLine);
 			var imag=document.createElement("img");
 			imag=ImageExist('http://its.fh-salzburg.ac.at/uploads/pics/'+zImage); 
+			div.appendChild(imag);
 			//...und anschließend in neue erzeugte Elemente gesetzt
 			//die Elemente brauchen dringend eine besseres CSS als aktuell die infoUnit
 			//imag.setAttribute("src", source);
@@ -328,9 +330,9 @@ function AddContent(id)
 			myH1.appendChild(myText);
 			div.appendChild(myH1);
 			
-			div.appendChild(imag);
+			//div.appendChild(imag);
 			
-			elem.appendChild(div);
+			elem.appendChild(Listelement);
 		
 		}
 	var Endnode = document.createElement("h1");

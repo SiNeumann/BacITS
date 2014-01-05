@@ -333,6 +333,7 @@ function AddContent(id)
 			//div.appendChild(imag);
 			
 			elem.appendChild(Listelement);
+			$(elem).listview("refresh");
 		
 		}
 	var Endnode = document.createElement("h1");

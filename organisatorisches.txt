@@ -22,7 +22,7 @@ Werbung vom Studiengang!!!
 
 Abstract
 
-Vorwort
+Vorwort/Einleitung
 
 Theoretischer Teil �ber benutzte tools:
 	Cordova/Phonegap/Phonegap build/Entstehung/wie benutzt man es/... /*Andi*/
@@ -44,3 +44,5 @@ Praktischer Teil:
 	Einbinden von Plugins, Beispiel QR-Code /*Andi*/
 	
 	Arbeitsspeicher!
+
+Zusammenfassung und Ausblick

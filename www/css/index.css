@@ -134,6 +134,26 @@ h4
 	border-right: 1px solid #0085c3;
 }
 
+.nheader
+{
+
+}
+
+.nimg
+{
+
+}
+
+.nshort
+{
+
+}
+
+.nbody
+{
+
+}
+
 #appheader
 {
 	/*
@@ -300,3 +320,4 @@ img
 	vertical-align:middle;
 	display:table-cell;
 }
+

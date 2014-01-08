@@ -46,3 +46,90 @@ Praktischer Teil:
 	Arbeitsspeicher!
 
 Zusammenfassung und Ausblick
+
+--------------------------------------------------------------------------
+
+Kurzzusammenfassung
+Abstract
+Inhaltsverzeichnis
+Abkürzungsverzeichnis
+Abbildungsverzeichnis
+Listingverzeichnis
+Einleitung
+Theoretischer Teil
+	PhoneGap
+		Was ist PhoneGap?
+		Probleme bei plattformübergreifender Programmierung ohne PhoneGap
+		Entstehung von PhoneGap
+		PhoneGap Build
+		Wie funktioniert PhoneGap?
+		Cordova vs. PhoneGap
+	HTML5
+		1 HTML
+		2 Aufbau
+			2.1 DOM
+			2.2. Attribute
+			2.3 Bereiche
+				2.3.1 CDATA
+				2.3.2 PCDATA
+				2.3.3 RCDATA
+			2.4 Zeichenkodierung
+			2.5 Grundgerüst
+				2.5.1 Dokumenttyp-Deklaration
+			2.6 Kommentare
+			2.7 MIME
+		3 [Aufbau einer Seite] <-- andere Überschrift, mir is noch nix eingefallen
+			3.1 Head <head>
+				3.1.1 Titel <title>
+				3.1.2 Metadaten <meta>
+				3.1.3 Verknüpfung <link>
+			3.2 Body <body>
+				3.2.1 Struktur
+				3.2.2 Links
+				3.2.3 Grafiken einbinden
+		4 HTML4/HTML5
+		5 Skripting
+			5.1 Einbinden
+	CSS
+		1 Einbinden
+			1.1 Extern
+			1.2 Intern
+			1.3 Inline
+		2 Syntax
+			2.1 Regeln
+			2.2 Selektoren
+			2.3 Klassen
+			2.4 IDs
+			2.5 Pseudo-Elemente und Pseudo-Klassen
+		3 Boxmodell
+		4 Wertangaben
+		5 Eigenschaften
+			5.1 Textformatierung
+			5.2 Positionierung
+	Github
+	JavaScript
+		jQuery und jQuery mobile	
+	XML
+Praktischer Teil
+	Struktur der App	
+		Die Config.xml Datei
+		Layout
+		Navigation
+		Laden und Speichern der Daten
+			Welche Möglichkeiten gibt es und für welche haben wir uns entschieden
+			LocalStorage
+				Implementation
+			jQuery Ajax Call
+			Same Domain Policy
+		Auswerten und parsen der Daten
+			Ungültigkeit des XML
+		Image Handling
+			Gültig Bildformate in iOS, Android und Windows Phone
+			Probleme mit dem Arbeitsspeicher
+	Debugging
+	Einbinden von PhoneGap Plug-Ins
+	Wie war das Arbeiten mit den Tools
+Zusammenfassung und Ausblick
+Literaturverzeichnis
+Anhang
+

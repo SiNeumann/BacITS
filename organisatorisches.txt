@@ -15,10 +15,12 @@ X	default-Bild einf�gen/schon erledigt /*Sigi*/
 default-Text/News einf�gen//Warum wenns keine gibt werden keine angezeigt, aber ich kann im Zuge des Refactorting,
 das ich jetzt dann mache, eine Meldung einfügen, das es aktuell keine News gibt./*Sigi*/
 Splashscreen und Icon der App /*Andi*/ (jQuery Icon Menü!!) /*Nicole*/
-Nur Portratmodus	/*Andi*/
+Nur Portraitmodus	/*Andi*/
 Werbung vom Studiengang!!! /*Nicole*/
 (bild übber oder unterm header - einfach image src ist irgendein link)
 Kamera - warum fkt. im Browser??? 	/*Andi*/
+
+evtl. schauen, was mit den Bildern passiert und viell. kann man es umgehen, dass sie immer neu geladen werden /*Sigi*/
 
 
 
@@ -126,7 +128,7 @@ Praktischer Teil
 		Image Handling /*Sigi*/					/*2,5*/
 			Gültig Bildformate in iOS, Android und Windows Phone
 			Probleme mit dem Arbeitsspeicher
-	Debugging /*Sigi*/							/*0,33*/
+	Debugging + Arbeitsspeicher (Wo kommen die Bilder her, wenn keine Verb.	zum inet ist) /*Sigi*//*0,33*/
 	Einbinden von PhoneGap Plug-Ins /*Andi*/	/*0,33*/
 Zusammenfassung und Ausblick /*Nicole*/			/*1*/
 

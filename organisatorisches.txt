@@ -27,20 +27,20 @@ Vorwort/Einleitung
 Theoretischer Teil �ber benutzte tools:
 	Cordova/Phonegap/Phonegap build/Entstehung/wie benutzt man es/... /*Andi*/
 	jQuery/mobile
-	Github //hab ich jetzt die erste Seite geschrieben /*Sigi*/
+	Github //hab ich jetzt die erste Seite geschrieben /*Sigi*/ 2 Seiten + Screenshots
 	HTML5/JS/CSS ? //Ich denke daraus könne wir 3 Punkte machen /*Sigi*/
 	XML /*Sigi*/
 Praktischer Teil:
 	wie war das Arbeiten mit den Tools... (oder so...??)
-	Struktur der App
+	Struktur und Konzept der App/*Sigi*/
 	config.xml /*Andi*/
 	Layout
-	Navigation (Wischgesten)
+	Navigation (Wischgesten)/*Sigi*/ 1Seite + Screenshots
 	Laden und Speicherung der Daten /*Andi*/
-	Image handling und gültige Formate in IOS,Android und Windows/*Sigi*/ ich schreib schon dran
-	Auswerten und parsen der Daten
+	Image handling und gültige Formate in IOS,Android und Windows/*Sigi*/ ich schreib schon dran 2 Seiten
+	Auswerten und parsen der Daten/*Sigi*/ 2 Seiten
 	Debuggen
-	XML - ung�ltig bei sonderzeichen wenn kein cdata
+	Arbeitsspeicher /*Sigi*/ 1 Seite 
 	Einbinden von Plugins, Beispiel QR-Code /*Andi*/
 	
 	Arbeitsspeicher!

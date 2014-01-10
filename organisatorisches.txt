@@ -5,15 +5,20 @@ Bitte um Erg�nzung...
 ------------------------------------------------------------------------------------------------
 --To-Dos:
 
-Layout mal sch�n machen
-Die Kamera noch einbinden
-QR-Code Scanner
-Laden+Speichern der Daten fertigstellen (ich schreib dem Back gleich mal wegen den anderen XMLs)
-default-Bild einf�gen/schon erledigt /*Sigi*/
+Layout mal sch�n machen (Überschriften in der Newsübersicht kleiner und ohne Überstrich)(In den Headern ist die headline zu kurz??? auch wenn es platz hätte)
+(Alles groß geschrieben??? Ändern)
+(Punkte mit Pfeilen)
+X	Die Kamera noch einbinden
+X	QR-Code Scanner
+Laden+Speichern der Daten fertigstellen (Ladeanimation + im Hintergrund laden, nicht beim Start)
+X	default-Bild einf�gen/schon erledigt /*Sigi*/
 default-Text/News einf�gen//Warum wenns keine gibt werden keine angezeigt, aber ich kann im Zuge des Refactorting,
 das ich jetzt dann mache, eine Meldung einfügen, das es aktuell keine News gibt./*Sigi*/
-Splashscreen und Icon der App
-Werbung vom Studiengang!!!
+Splashscreen und Icon der App /*Andi*/ (jQuery Icon Menü!!) /*Nicole*/
+Nur Portratmodus	/*Andi*/
+Werbung vom Studiengang!!! /*Nicole*/
+(bild übber oder unterm header - einfach image src ist irgendein link)
+Kamera - warum fkt. im Browser??? 	/*Andi*/
 
 
 
@@ -47,7 +52,7 @@ Praktischer Teil:
 
 Zusammenfassung und Ausblick
 
---------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
 
 Kurzzusammenfassung
 Abstract
@@ -55,34 +60,28 @@ Inhaltsverzeichnis
 Abkürzungsverzeichnis
 Abbildungsverzeichnis
 Listingverzeichnis
-Einleitung
+Einleitung					/*Andi*/
 Theoretischer Teil
-	PhoneGap
+	PhoneGap				/*Andi*//*5*/
 		Was ist PhoneGap?
 		Probleme bei plattformübergreifender Programmierung ohne PhoneGap
 		Entstehung von PhoneGap
 		PhoneGap Build
 		Wie funktioniert PhoneGap?
 		Cordova vs. PhoneGap
-	HTML5
+		config.xml /*Andi*/
+		Verschiedene Versionen (2.9, 3.1)
+	HTML5 							/*5*/
 		1 HTML
 		2 Aufbau
 			2.1 DOM
 			2.2. Attribute
-			2.3 Bereiche
-				2.3.1 CDATA
-				2.3.2 PCDATA
-				2.3.3 RCDATA
-			2.4 Zeichenkodierung
 			2.5 Grundgerüst
 				2.5.1 Dokumenttyp-Deklaration
 			2.6 Kommentare
 			2.7 MIME
 		3 [Aufbau einer Seite] <-- andere Überschrift, mir is noch nix eingefallen
 			3.1 Head <head>
-				3.1.1 Titel <title>
-				3.1.2 Metadaten <meta>
-				3.1.3 Verknüpfung <link>
 			3.2 Body <body>
 				3.2.1 Struktur
 				3.2.2 Links
@@ -106,30 +105,31 @@ Theoretischer Teil
 		5 Eigenschaften
 			5.1 Textformatierung
 			5.2 Positionierung
-	Github
-	JavaScript
-		jQuery und jQuery mobile	
-	XML
+	Github	/*Sigi*/ /*1*/
+	JavaScript	/*Nicole*/	/*2*/
+		jQuery und jQuery mobile	 /*Nicole*/
+	XML /*Sigi*/	/*1*/
+	Debugging /*Sigi*/ /*1,5*/
 Praktischer Teil
-	Struktur der App	
-		Die Config.xml Datei
-		Layout
-		Navigation
-		Laden und Speichern der Daten
+	Struktur der App	/*Nicole - nur wies ausschaut*/
+		Die Config.xml Datei /*Andi*/ /*0.33*/
+		Layout /*Nicole*/			/*1*/
+		Navigation /*Sigi*/ /*nur eine Page + Swipe, newsverknüpf.*/	/*1,5*/
+		Laden und Speichern der Daten /*Andi*/	/*2,5*/
 			Welche Möglichkeiten gibt es und für welche haben wir uns entschieden
 			LocalStorage
 				Implementation
 			jQuery Ajax Call
 			Same Domain Policy
-		Auswerten und parsen der Daten
+		Auswerten und parsen der Daten /*Sigi*/ /*2*/
 			Ungültigkeit des XML
-		Image Handling
+		Image Handling /*Sigi*/					/*2,5*/
 			Gültig Bildformate in iOS, Android und Windows Phone
 			Probleme mit dem Arbeitsspeicher
-	Debugging
-	Einbinden von PhoneGap Plug-Ins
-	Wie war das Arbeiten mit den Tools
-Zusammenfassung und Ausblick
+	Debugging /*Sigi*/							/*0,33*/
+	Einbinden von PhoneGap Plug-Ins /*Andi*/	/*0,33*/
+Zusammenfassung und Ausblick /*Nicole*/			/*1*/
+
 Literaturverzeichnis
 Anhang
 

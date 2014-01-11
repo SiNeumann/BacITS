@@ -173,9 +173,9 @@ function displayRealContent(txt)
 	var id=split[0];
 	var xName="xmlfiles/"+id+".xml";
 	
-	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
 	
-	xDoc = getLocalContent(id);
+	/*xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();
@@ -291,8 +291,8 @@ function AddContent(id)
 	var xName="xmlfiles/"+id+".xml";
 	
 		
-	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent(id);
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	/*var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();

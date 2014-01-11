@@ -282,10 +282,10 @@ function AddContent(id)
 	$(elem).empty();
 	var networkState = navigator.connection.type;
 
-        if (networkState == Connection.NONE)
-        {
-        alert('No network connection!');
-        }
+       // if (networkState == Connection.NONE)
+        
+        alert(networkState;
+        
 	
 	}
 	catch(ex)

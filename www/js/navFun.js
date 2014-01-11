@@ -280,6 +280,13 @@ function AddContent(id)
 	elem=document.getElementById(id);
 	try{
 	$(elem).empty();
+	var networkState = navigator.connection.type;
+
+        if (networkState == Connection.NONE)
+        {
+        alert('No network connection!');
+        }
+	
 	}
 	catch(ex)
 	{

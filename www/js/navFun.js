@@ -10,7 +10,7 @@ var defaultMessage="Es sind keine Inhalte vorhanden";
 
 function removeElements(elem)
 {
-
+	$("ul").empty();
 	while(elem.firstChild)
 		{
 		   elem.removeChild(elem.firstChild);

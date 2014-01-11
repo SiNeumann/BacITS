@@ -80,8 +80,8 @@ function downloadContent(type){
       }, //success
 
       error: function(xhr, ajaxOptions, thrownError){
-      		alert(thrownError);
-      		alert(xhr.status);
+      		//alert(thrownError);
+      		//alert(xhr.status);
 		return getLocalContent(type);
       }//Error
       });

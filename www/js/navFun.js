@@ -10,7 +10,7 @@ var defaultMessage="Es sind keine Inhalte vorhanden";
 
 function removeElements(elem)
 {
-	$("ul").empty();
+	
 	while(elem.firstChild)
 		{
 		   elem.removeChild(elem.firstChild);
@@ -24,6 +24,7 @@ function RemoveContentFromSubsites()
 	 for(i=0;i<identifier.length;i++)
 	 	{
 		 	try{
+		 		//$("ul").empty();
 		 	elem=document.getElementById(identifier.item(i));
 		 	elem.innerHTML="";
 		 	}
@@ -172,8 +173,8 @@ function displayRealContent(txt)
 	var id=split[0];
 	var xName="xmlfiles/"+id+".xml";
 	
-//	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent(id);
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	/*var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();
@@ -275,14 +276,21 @@ function AddContent(id)
 	//nimmt ID eines Elements 
 	RemoveContentFromSubsites();
 	elem=document.getElementById(id);
+	try{
+	$(elem).empty();
+	}
+	catch(ex)
+	{
+		var sdf=ex;
+	}
 	//Rücksetzen des Inhalts soll anschließend geladen werden
 	elem.innerHTML="";
 	//Hoffentlich ist das XMLFile vorhanden, sonst ist die Seite leer
 	var xName="xmlfiles/"+id+".xml";
 	
 		
-	//var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
-	var xDoc = getLocalContent(id);
+	var xDoc=loadXMLDoc("xmlfiles/"+id+".xml");
+	/*var xDoc = getLocalContent(id);
 	
 	if(xDoc == null){
 		xDoc = downloadContent();
@@ -336,7 +344,13 @@ function AddContent(id)
 			
 		
 		}
+	try{
 	$(elem).listview("refresh");
+	}
+	catch(ex)
+	{
+		var a=ex;
+	}
 	var Endnode = document.createElement("h1");
 	Endnode.setAttribute("class","endnode");
 	//var somet=document.createTextNode("ssss");

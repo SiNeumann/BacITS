@@ -275,6 +275,7 @@ return xmlDoc;
 function AddContent(id)
 {
 	//nimmt ID eines Elements 
+	try{
 	RemoveContentFromSubsites();
 	elem=document.getElementById(id);
 	try{
@@ -357,4 +358,9 @@ function AddContent(id)
 	//var somet=document.createTextNode("ssss");
 	Endnode.appendChild(somet);
 	elem.appendChild(Endnode);
+}
+catch(ex)
+{
+	alert(ex);
+}
 }

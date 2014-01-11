@@ -356,7 +356,7 @@ function AddContent(id)
 	var Endnode = document.createElement("h1");
 	Endnode.setAttribute("class","endnode");
 	//var somet=document.createTextNode("ssss");
-	Endnode.appendChild(somet);
+	//Endnode.appendChild(somet);
 	elem.appendChild(Endnode);
 }
 catch(ex)

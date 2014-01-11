@@ -54,6 +54,6 @@
 <feature name="http://api.phonegap.com/1.0/camera"/>
 <feature name="http://api.phonegap.com/1.0/network"/>
 
-  <access origin="*fh-salzburg.ac.at*"/>
+  <access origin="*" subdomains="true"/>
 
 </widget>

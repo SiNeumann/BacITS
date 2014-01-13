@@ -322,3 +322,7 @@ img
 	display:table-cell;
 }
 
+a.ui-btn
+{
+	text-decoration = none;
+}

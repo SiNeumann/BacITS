@@ -112,17 +112,38 @@ jQuery(window).resize(function setHeaderHightResize(){
 jQuery(window).load(function setClickPicLoad(){
 
 	$currentWidth = null;
-	$currentWidth = (window).width();
+	$currentWidth = $(window).width();
 	
-	alert("current width: "+$currentWidth);
+	//alert("current width: "+$currentWidth);
 	
 	$position = null;
 	$position = $currentWidth/2;
 	
-	alert("margin: "+$position);
+	//alert("margin: "+$position);
 	
 	$( "#clickPic" ).css( "width", $currentWidth+"px");
 	
 	$( "#clickPic" ).css( "margin-left", "-"+$position+"px");
+
+});
+
+
+/*
+
+	Setzt die Breite der Listenelemente gleich der Breite des Fensters
+
+*/
+jQuery(window).load(function setWidthNavBar(){
+
+	$currentWindowWidth = null;
+	$currentWindowWidth = $(window).width();
+	$currentWidth = null;
+	$currentWidth = $(".ui-btn").width();
+	
+	//alert("current window width: "+$currentWindowWidth);
+	//alert("current width: "+$currentWidth);
+	
+	$( ".ui-btn" ).css( "width", $currentWindowWidth+"px");
+	
 
 });

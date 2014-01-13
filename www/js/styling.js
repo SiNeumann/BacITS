@@ -109,7 +109,7 @@ jQuery(window).resize(function setHeaderHightResize(){
 	
 });
 
-jQuery(window).load(function setClickPicLoad(){
+/*jQuery(window).load(function setClickPicLoad(){
 
 	$currentWidth = null;
 	$currentWidth = $(window).width();
@@ -125,7 +125,7 @@ jQuery(window).load(function setClickPicLoad(){
 	
 	$( "#clickPic" ).css( "margin-left", "-"+$position+"px");
 
-});
+});*/
 
 
 /*

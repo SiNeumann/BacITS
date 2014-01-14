@@ -109,7 +109,7 @@ jQuery(window).resize(function setHeaderHightResize(){
 	
 });
 
-/*jQuery(window).load(function setClickPicLoad(){
+jQuery(window).load(function setClickPicLoad(){
 
 	$currentWidth = null;
 	$currentWidth = $(window).width();
@@ -125,7 +125,7 @@ jQuery(window).resize(function setHeaderHightResize(){
 	
 	$( "#clickPic" ).css( "margin-left", "-"+$position+"px");
 
-});*/
+});
 
 
 /*
@@ -138,12 +138,31 @@ jQuery(window).load(function setWidthNavBar(){
 	$currentWindowWidth = null;
 	$currentWindowWidth = $(window).width();
 	$currentWidth = null;
-	$currentWidth = $(".ui-btn").width();
+	$currentWidth = $("#ListElement").width();
 	
 	//alert("current window width: "+$currentWindowWidth);
 	//alert("current width: "+$currentWidth);
 	
-	$( ".ui-btn" ).css( "width", $currentWindowWidth+"px");
+	$( "#ListElement" ).css( "width", $currentWindowWidth+"px");
+
+});
+
+/*
+
+	Setzt die Breite der Listenelemente gleich der Breite des Fensters
+	beim erneuten Laden der Seite/Schwenken des Gerätes
+
+*/
+jQuery(window).resize(function setWidthNavBarResize(){
+
+	$currentWindowWidth = null;
+	$currentWindowWidth = $(window).width();
+	$currentWidth = null;
+	$currentWidth = $("#ListElement").width();
 	
+	//alert("current window width: "+$currentWindowWidth);
+	//alert("current width: "+$currentWidth);
+	
+	$( "#ListElement" ).css( "width", $currentWindowWidth+"px");
 
 });

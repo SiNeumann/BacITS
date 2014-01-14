@@ -123,13 +123,13 @@ h4
 {
 	width:100%;
 	position:fixed;
-
+	overflow: scroll;
 	padding-top: 100px;
 	
 	
 }
 
-#news, #termine, #jobs, #Projekte
+#News, #termine, #jobs, #Projekte
 {
 	border-left: 1px solid #0085c3;
 	border-right: 1px solid #0085c3;
@@ -234,8 +234,27 @@ h4
 }
 #Headline
 {
-	border-top: solid;
+	/*border-top: solid;*/
+	font-seize: 16px;
+	
 }
+
+#shortText
+{
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+#bodyText
+{
+	text-align: justify;
+}
+
+#imag
+{
+	padding: 5px;
+}
+
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;
@@ -280,6 +299,7 @@ h4
 	border-top: 1px solid #91ef52;
 	border-left: 1px solid #6da845;
 	border-right: 1px solid #6da845;
+}
 
 /*[data-role=page]{height: 100% !important; position:relative !important;}
 [data-role=footer]{bottom:0; position:absolute !important; top: auto !important; width:100%;}*/

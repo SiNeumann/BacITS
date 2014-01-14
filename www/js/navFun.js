@@ -216,6 +216,9 @@ function displayRealContent(txt)
 	var sideHeader=document.getElementById("SubNews");
 	sideHeader.innerHTML=headLine.innerHTML;
 	headLine.setAttribute("id","Headline");
+	shortText.setAttribute("id","shortText");
+	bodyText.setAttribute("id","bodyText");
+	imag.setAttribute("id","imag");
 	div.appendChild(headLine);
 	div.appendChild(imag);
 	div.appendChild(shortText);

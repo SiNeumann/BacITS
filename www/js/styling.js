@@ -28,14 +28,21 @@ jQuery(window).load(function setElementsLoad(){
 	//Header in den Unterseitten soll 5% des Bildschirmes einnehmen
 	$headerHeightSub = $currentHeight/20;
 	
+	
 	//ist der Header in der Hauptseite kleiner als 50 soll er auf 50px gesetzt werden
 	if($headerHeightMain<50){
 		$headerHeightMain = 50;
+	}
+	else if($headerHeightMain>100) {
+		$headerHeightMain = 100;
 	}
 
 	//ist der Header in den Unterseiten kleiner als 45 soll er auf 45px gesetzt werden
 	if($headerHeightSub<45){
 		$headerHeightSub = 45;
+	}
+	else if($headerHeightSub>100) {
+		$headerHeightSub = 100;
 	}
 	
 	/*
@@ -83,10 +90,16 @@ jQuery(window).resize(function setHeaderHightResize(){
 	if($headerHeightMain<50){
 		$headerHeightMain = 50;
 	}
+	else if($headerHeightMain>100) {
+		$headerHeightMain = 100;
+	}
 
 	//ist der Header in den Unterseiten kleiner als 45 soll er auf 45px gesetzt werden
 	if($headerHeightSub<45){
 		$headerHeightSub = 45;
+	}
+	else if($headerHeightSub>100) {
+		$headerHeightSub = 100;
 	}
 	
 	/*
@@ -166,3 +179,4 @@ jQuery(window).resize(function setWidthNavBarResize(){
 	$( "#ListElement" ).css( "width", $currentWindowWidth+"px");
 
 });
+

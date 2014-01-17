@@ -107,25 +107,25 @@ Theoretischer Teil
 		5 Eigenschaften
 			5.1 Textformatierung
 			5.2 Positionierung
-	Github	/*Sigi*/ /*1*/
+	Github	/*Sigi*/ /*1.5*/
 	JavaScript	/*Nicole*/	/*2*/
 		jQuery und jQuery mobile	 /*Nicole*/
-	XML /*Sigi*/	/*1*/
-	Debugging /*Sigi*/ /*1,5*/
+	XML /*Sigi*/	/*0.5*/
+	Debugging /*Sigi*/ /*2,5*/
 Praktischer Teil
 	Struktur der App	/*Nicole - nur wies ausschaut*/
 		Die Config.xml Datei /*Andi*/ /*0.33*/
 		Layout /*Nicole*/			/*1*/
-		Navigation /*Sigi*/ /*nur eine Page + Swipe, newsverknüpf.*/	/*1,5*/
+		Navigation /*Sigi*/ /*nur eine Page + Swipe, newsverknüpf.*/	/*0,5*/
 		Laden und Speichern der Daten /*Andi*/	/*2,5*/
 			Welche Möglichkeiten gibt es und für welche haben wir uns entschieden
 			LocalStorage
 				Implementation
 			jQuery Ajax Call
 			Same Domain Policy
-		Auswerten und parsen der Daten /*Sigi*/ /*2*/
+		Auswerten und parsen der Daten /*Sigi*/ /*2.5*/
 			Ungültigkeit des XML
-		Image Handling /*Sigi*/					/*2,5*/
+		Image Handling /*Sigi*/					/*1,5*/
 			Gültig Bildformate in iOS, Android und Windows Phone
 			Probleme mit dem Arbeitsspeicher
 	Debugging + Arbeitsspeicher (Wo kommen die Bilder her, wenn keine Verb.	zum inet ist) /*Sigi*//*0,33*/
@@ -134,4 +134,8 @@ Zusammenfassung und Ausblick /*Nicole*/			/*1*/
 
 Literaturverzeichnis
 Anhang
+
+
+Sigi Counter akt 7 Seiten Auswerten und Parsen 2.5 Github 1 Pichandling 1.5 Debugging 2.5 ohne Bilder mit Bilder ~8,5
+      ausstehend 3 Seiten XML(0,5), Mavigation(1) Arbeitsspeicher(weiß nicht ob ich des in den Griff kriege) 
 

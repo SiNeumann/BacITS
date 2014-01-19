@@ -30,16 +30,16 @@ jQuery(window).load(function setElementsLoad(){
 	
 	
 	//ist der Header in der Hauptseite kleiner als 50 soll er auf 50px gesetzt werden
-	if($headerHeightMain<50){
-		$headerHeightMain = 50;
+	if($headerHeightMain<55){
+		$headerHeightMain = 55;
 	}
 	else if($headerHeightMain>100) {
 		$headerHeightMain = 100;
 	}
 
 	//ist der Header in den Unterseiten kleiner als 45 soll er auf 45px gesetzt werden
-	if($headerHeightSub<45){
-		$headerHeightSub = 45;
+	if($headerHeightSub<55){
+		$headerHeightSub = 55;
 	}
 	else if($headerHeightSub>100) {
 		$headerHeightSub = 100;
@@ -87,16 +87,16 @@ jQuery(window).resize(function setHeaderHightResize(){
 	$headerHeightSub = $currentHeight/20;
 	
 	//ist der Header in der Hauptseite kleiner als 50 soll er auf 50px gesetzt werden
-	if($headerHeightMain<50){
-		$headerHeightMain = 50;
+	if($headerHeightMain<55){
+		$headerHeightMain = 55;
 	}
 	else if($headerHeightMain>100) {
 		$headerHeightMain = 100;
 	}
 
 	//ist der Header in den Unterseiten kleiner als 45 soll er auf 45px gesetzt werden
-	if($headerHeightSub<45){
-		$headerHeightSub = 45;
+	if($headerHeightSub<55){
+		$headerHeightSub = 55;
 	}
 	else if($headerHeightSub>100) {
 		$headerHeightSub = 100;
@@ -180,3 +180,38 @@ jQuery(window).resize(function setWidthNavBarResize(){
 
 });
 
+jQuery(window).load(function setImagWidth() {
+
+	$currentWindowWidth = null;
+	$currentWindowWidth = $(window).width();
+	$currentImagWidth = null;
+	$currentImagWidth = $("#imag").width();
+	$setWidth = null;
+	
+	if($currentImagWidth>$currentWindowWidth) {
+		$setWidth = $currentWindowWidth - 10;
+	}
+	
+	$("#imag").css("width", $setWidth+"px");
+	
+});
+
+jQuery(window).load(function setHeaderStyle() {
+
+	$fontSize = 24;
+	$padd = 10;
+
+	$("h1").css("font-size", $fontSize+"px");
+	$("h1").css("padding", $padd+"px");
+	
+});
+
+jQuery(window).ready(function setHeaderStyle() {
+
+	$fontSize = 24;
+	$padd = 10;
+
+	$("h1").css("font-size", $fontSize+"px");
+	$("h1").css("padding", $padd+"px");
+	
+});

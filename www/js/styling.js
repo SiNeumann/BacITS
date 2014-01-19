@@ -191,7 +191,7 @@ jQuery(window).load(function setImagWidth() {
 	$setWidth = null;
 	$setHeight = null;
 	
-	alert("Current: "+$currentImagWidth);
+	// alert("Current: "+$currentImagWidth);
 	
 	if($currentImagWidth>$currentWindowWidth) {
 		$setWidth = $currentWindowWidth - 10;
@@ -212,10 +212,7 @@ jQuery(window).load(function setImagWidth() {
 			$("#imag").css("height", $setHeight+"px");
 		
 		}
-	}
-	
-	
-	
+	}	
 });
 
 jQuery(window).load(function setHeaderStyle() {

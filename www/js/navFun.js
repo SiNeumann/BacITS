@@ -287,7 +287,7 @@ function AddContent(id)
 
        // if (networkState == Connection.NONE)
         
-        alert(networkState);
+       // alert(networkState);
         
 	
 	}

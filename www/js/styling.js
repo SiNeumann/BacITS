@@ -186,13 +186,35 @@ jQuery(window).load(function setImagWidth() {
 	$currentWindowWidth = $(window).width();
 	$currentImagWidth = null;
 	$currentImagWidth = $("#imag").width();
+	$currentImagHeight = null;
+	$currentImagHeight = $("#imag").height();
 	$setWidth = null;
+	$setHeight = null;
+	
+	alert("Current: "+$currentImagWidth);
 	
 	if($currentImagWidth>$currentWindowWidth) {
 		$setWidth = $currentWindowWidth - 10;
+		
+		if($currentImagWidth>$currentImagHeight) {
+		
+			$("#imag").css("width", $setWidth+"px");
+			$ratio = width/height;
+			$setHeight = setWidth/ratio;
+			$("#imag").css("height", $setHeight+"px");
+		
+		}
+		else{
+		
+			$("#imag").css("width", $setWidth+"px");
+			$ratio = height/width;
+			$setHeight = setWidth*ratio;
+			$("#imag").css("height", $setHeight+"px");
+		
+		}
 	}
 	
-	$("#imag").css("width", $setWidth+"px");
+	
 	
 });
 

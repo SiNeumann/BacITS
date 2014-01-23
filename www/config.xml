@@ -38,7 +38,7 @@
 <!-- gap:platform name="ios" / -->
 <gap:platform name="android" />
 <gap:platform name="winphone" />
-<gap:plugin name="com.phonegap.plugins.barcodescanner" version="0.6.0" />
+<gap:plugin name="com.phonegap.plugins.barcodescanner" />
 
 <!--<feature name="debug-server" required="true">
     <param name="domain" value="http://192.168.2.101:8081"/>

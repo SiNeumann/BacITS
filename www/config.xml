@@ -23,7 +23,7 @@
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "at.ac.fh-salzburg.app"
         versionCode = "1" 
-        version     = "0.0.1" >
+        version     = "0.1.1" >
 
     <name>ITS App</name>
 
@@ -38,7 +38,7 @@
 <!-- gap:platform name="ios" / -->
 <gap:platform name="android" />
 <gap:platform name="winphone" />
-<gap:plugin name="com.phonegap.plugins.barcodescanner" />
+<gap:plugin name="com.phonegap.plugins.barcodescanner"  version="0.6.0"/>
 
 <!--<feature name="debug-server" required="true">
     <param name="domain" value="http://192.168.2.101:8081"/>
@@ -48,7 +48,7 @@
 
 
 
-<preference name="phonegap-version" value="3.1.0" />
+<preference name="phonegap-version" value="2.9.0" />
 <preference name="permissions" value="none"/>
 <preference name="orientation" value="portrait" />
 

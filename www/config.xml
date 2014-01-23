@@ -50,10 +50,11 @@
 
 <preference name="phonegap-version" value="2.9.0" />
 <preference name="permissions" value="none"/>
+<preference name="orienation" value="portrait" />
 
 <feature name="http://api.phonegap.com/1.0/camera"/>
 <feature name="http://api.phonegap.com/1.0/network"/>
 
-  <access origin="*" subdomains="true"/>
+  <access origin="*fh-salzburg.ac.at*" subdomains="true"/>
 
 </widget>
